@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <!-- dev:css -->
+  <link rel="stylesheet" href="./css/screen.css">
+  <!-- endinject -->
+</head>
+
+<body>
+  <header>
+	{% include '../layouts/header.html' %}
+  </header>
+  <main> 
+	{% block content %}{% endblock %}
+  </main>
+  <footer>
+    {% include '../layouts/footer.html' %}
+  </footer>
+  <!--jquery:js-->
+  <script src="./libs/jquery/js/jquery.min.js"></script>
+  <!--endinject-->
+  
+  <!--dev:js-->
+
+  <script src="./js/main.js"></script>
+
+  <!--endinject-->
+</body>
+
+
+</html>
