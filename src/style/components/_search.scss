@@ -1,0 +1,32 @@
+.search {
+  position: relative;
+  &:before {
+    background-color: #b9b9b9;
+    content: "";
+    height: 20px;
+    position: absolute;
+    right: 14%;
+    top: 14px;
+    width: 1px;
+  }
+  input[type=text] {
+    height: 43px;
+    width: 96%;
+    border: 1px solid #b9b9b9;
+    padding-left: 4%;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+  input[type=submit] {
+    position: absolute;
+    background-color: transparent;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    cursor: pointer;
+    @include sprite($ic_search);
+    &:hover {
+      @include sprite($ic_search-hover);
+    }
+  }
+}

@@ -1,0 +1,145 @@
+header {
+  padding-top: 15px;
+  @include breakpoint(max-width $medium) {
+    margin: 0;
+    padding: 0;
+  }
+  //start for mobile
+  .top-line {
+    display: none;
+    background-color: #2196f3;
+    color: #fff;
+    @include breakpoint(max-width $medium) {
+      display: block;
+    }
+    .wrapper {
+      background-color: #2196f3;
+    }
+    .mini-logo{
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .table {
+      height: 54px;
+      width: 100%;
+      .table-cell {
+        vertical-align: middle;
+        &:first-child {
+          width: 10%;
+          padding-right: 16px;
+        }
+        &:nth-child(2) {
+          width: 8%;
+        }
+        &:nth-child(3) {
+          width: 80%;
+          text-align: right;
+        }
+      }
+      .right-items {
+        float: right;
+      }
+      .cell-line {
+        display: table-cell;
+        padding-left: 16px;
+        vertical-align: middle;
+      }
+      .mobile-phones {
+        font-size: 0.9em;
+        line-height: 1.2em;
+        @include breakpoint(max-width $small) {
+          display: none;
+        }
+      }
+      .mobile-search {
+        input[type=text] {
+          width: 70%;
+          box-sizing: border-box;
+          border-radius: 3px;
+          border: 0;
+          height: 26px;
+        }
+        .mobile-search-btn {
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+        }
+      }
+      .mobile-feedback {
+        button {
+          background-color: transparent;
+          border: 0;
+        }
+      }
+    }
+  }
+  //end for mobile
+  .top-section {
+    @include breakpoint(max-width $medium) {
+      display: none;
+    }
+    .container {
+      padding-bottom: 7px;
+      border-bottom: 1px solid #b9b9b9;
+    }
+    .cell {
+      &:first-child {
+        float: left;
+        margin-right: 4%;
+        width: 33%;
+      }
+      &:nth-child(2) {
+        float: left;
+        width: 41%;
+      }
+      &:last-child {
+        float: right;
+        min-width: 200px;
+        max-width: 20%;
+        height: 54px;
+        @include span(last);
+      }
+      .logo {
+        img {
+          max-width: 100%;
+        }
+      }
+      .phone-numbers {
+        text-align: right;
+        padding-top: 3px;
+        font-weight: 600;
+        line-height: 1.3em;
+        height: 54px;
+        font-size: 1em;
+      }
+      .contact-address {
+        line-height: 1.5em;
+        height: 57px;
+      }
+      .feedback-btn {
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid;
+        color: #00923f;
+        height: 46px;
+        font-size: 1.1em;
+        font-family: $base-font-family;
+        line-height: 2em;
+        cursor: pointer;
+        &:hover {
+          background-color: scale-color(#00923f, 10);
+          color: #fff;
+          i {
+            @include sprite($ic_note-hover);
+          }
+        }
+        i {
+          position: relative;
+          top: 3px;
+          right: -4px;
+        }
+      }
+    }
+  }
+}

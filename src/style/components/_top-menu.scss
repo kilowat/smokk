@@ -1,0 +1,28 @@
+.top-menu {
+  margin-top: 18px;
+  height: 42px;
+  li {
+    display: inline-block;
+    margin-left: 19px;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include breakpoint(max-width 1005px){
+      margin-right: 13px;
+      margin-left: 13px;
+    }
+    a {
+      padding-left: 3px;
+      padding-right: 3px;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding-bottom: 18px;
+      &.selected,
+      &:hover {
+        color: #007cc2;
+        border-bottom: 4px solid;
+      }
+    }
+  }
+}

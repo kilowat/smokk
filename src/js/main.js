@@ -1,4 +1,8 @@
-
 $(document).ready(function(){
-  //= partials/app.js
+  
+    $('#bx-slider').bxSlider({
+    pagerCustom: '#bx-pager',
+    controls: true,
+  });
+  
 });

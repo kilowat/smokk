@@ -1,0 +1,27 @@
+.ic_note{
+  @include sprite($ic_note);
+}
+.ic_note-hover{
+  @include sprite($ic_note-hover);
+}
+.ic_search-white{
+  @include sprite($ic_search-white);
+}
+.ic_book{
+  @include sprite($ic_book);
+}
+.ic_right-arrow{
+  @include sprite($ic_right-arrow);
+}
+.ic_right-arrow-hover{
+  @include sprite($ic_right-arrow-hover);
+}
+.ic_left-arrow{
+  @include sprite($ic_left-arrow);
+}
+.ic_left-arrow-hover{
+  @include sprite($ic_left-arrow-hover);
+}
+.ic_triangle{
+  @include sprite($ic_triangle);
+}

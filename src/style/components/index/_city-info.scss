@@ -1,0 +1,93 @@
+.city-info {
+  margin-top: 70px;
+  @include container;
+  @include breakpoint(max-width 865px) {
+    margin-top: 50px;
+    font-size: 0.6em;
+  }
+  ul {
+    li {
+      @include gallery(1 of 4);
+      @include breakpoint(max-width $small) {
+        @include gallery(1 of 2);
+        div {
+          padding: 0!important;
+          text-align: center;
+          .number {
+            &:before {
+              display: none!important;
+            }
+          }
+        }
+      }
+      color: #80b7d6;
+      &:firt-child {
+        text-align: left;
+        .number:before {}
+      }
+      &:last-child {
+        div {
+          padding-left: 50px;
+          .number:before {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(2) {
+        div {
+          .number {
+            &:before {
+              background-color: #80b7d6;
+              content: "";
+              display: block;
+              height: 5px;
+              left: 65%;
+              position: absolute;
+              top: 48%;
+              width: 50%;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        div {
+          padding-left: 30px;
+          .number {
+            &:before {
+              background-color: #80b7d6;
+              content: "";
+              display: block;
+              height: 5px;
+              left: 75%;
+              position: absolute;
+              top: 48%;
+              width: 60%;
+            }
+          }
+        }
+      }
+      .number {
+        display: block;
+        font-size: 6em;
+        font-weight: 500;
+        font-family: $rubik;
+        position: relative;
+        &:before {
+          background-color: #80b7d6;
+          content: "";
+          display: block;
+          height: 5px;
+          left: 46%;
+          position: absolute;
+          top: 48%;
+          width: 50%;
+        }
+      }
+      .word {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.1rem;
+      }
+    }
+  }
+}

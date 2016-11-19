@@ -1,4 +1,19 @@
-{% extends './../layouts/master.html' %} 
-{% block content %}
-	index page
+{% extends './../layouts/master.html' %} {% block content %}
+<div class="wrapper">
+  <!--start component slider-->
+  {% include '.././components/slider.html' %}
+  <!--end component slider-->
+
+  <!--start component city info-->
+  <div class="city-info">
+    <ul>
+      <li><div><span class="number">7</span><span class="word">городских округов</span></div></li>
+      <li><div><span class="number">37</span><span class="word">муниципальных районов</span></div></li>
+      <li><div><span class="number">27</span><span class="word">городских поселений</span></div></li>
+      <li><div><span class="number">116</span><span class="word">сельских поселений</span></div></li>
+    </ul>
+  </div>
+  <!--end component city info-->
+</div>
+
 {% endblock %}

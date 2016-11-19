@@ -26,6 +26,8 @@ var libsPath = require('./gulp_map.json');
 var libs = {
   susy: libsPath.susy, // use susy
   jquery: libsPath.jquery, // inject name jquery
+  drawer:libsPath.drawer,
+  bxslider:libsPath.bxslider
   //breakpoint: libsPath.breakpoint,
   // bourbon: libsPath.bourbon
   // bootstrap: libsPath.bootstrap, // inject name bootstrap

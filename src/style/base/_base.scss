@@ -1,3 +1,44 @@
-body{
-  
+body {}
+
+.container {
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+.wrapper {
+  padding-left: $container-margin;
+  padding-right: $container-margin;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: auto;
+}
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+i {
+  display: inline-block;
+}
+
+.table {
+  display: table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.text-center {
+  text-align: center;
 }
