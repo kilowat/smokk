@@ -1,0 +1,49 @@
+.about {
+  @include container;
+   margin: 66px auto 40px;
+  .text {
+    float: left;
+    width: 63%;
+    font-weight: 200;
+    line-height: 1.4em;
+    @include breakpoint(max-width $small) {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  .person-photo {
+    @include breakpoint(max-width $small) {
+      float: none;
+      width: 100%;
+    }
+    margin-left: 3%;
+    width: 34%;
+    float: left;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding-bottom: 30px;
+    img {
+      margin-bottom: 25px;
+      width: 100%;
+      height: auto;
+      @include breakpoint(max-width $small) {
+        float: none;
+        width: 200px;
+      }
+    }
+    .position {
+      font-style: italic;
+      font-weight: 300;
+      padding-bottom: 10px;
+    }
+    .name {}
+  }
+}
+.ya-map{
+  height: 300px;
+  background-color: #ccc;
+}

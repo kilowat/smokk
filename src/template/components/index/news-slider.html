@@ -1,0 +1,117 @@
+<div class="news-slider">
+  <h2>НОВОСТИ ИЗ МУНИЦИПАЛЬНЫХ ОБРАЗОВАНИЙ</h2>
+  <div id="news-slick-slider">
+    <!--foreach $arResult-->
+    {% for item in newsSLider %}
+    <div class="slide-row">
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="image">
+            <img src="{{ item.img }}" alt="">
+          </div>
+          <a href="#" title="#">
+            <div class="name">{{ item.name }}</div>
+            <div class="text">
+              {{ item.text }}
+            </div>
+            <div class="date">
+              {{ item.date }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+    <!--endforeach-->
+  </div>
+</div>
+<div class="row text-center">
+  <a href="#" title="Все новости из муниципальных образований" class="all-news-link"><i class="ic_book"></i><span>Все новости из муниципальных образований</span></a>
+</div>

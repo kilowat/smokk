@@ -1,0 +1,25 @@
+.link-list {
+  margin-bottom: 65px;
+  margin-left: 30px;
+  margin-right: 30px;
+  @include breakpoint(max-width 600px) {
+    .table {
+      width: 100%;
+    }
+  }
+  .item {
+    text-decoration: none;
+    .table-cell {
+      vertical-align: middle;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    span {
+      font-size: 1.1em;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    top: 27%;
+  }
+}

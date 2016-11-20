@@ -27,11 +27,11 @@ var libs = {
   susy: libsPath.susy, // use susy
   jquery: libsPath.jquery, // inject name jquery
   drawer:libsPath.drawer,
-  bxslider:libsPath.bxslider
+  bxslider:libsPath.bxslider,
   //breakpoint: libsPath.breakpoint,
   // bourbon: libsPath.bourbon
   // bootstrap: libsPath.bootstrap, // inject name bootstrap
-  //slick: libsPath.slick, // inject name slick
+  slick: libsPath.slick, // inject name slick
   //select:libsPath.select,
   //fancybox:libsPath.fancybox,
   //cropper:libsPath.cropper,

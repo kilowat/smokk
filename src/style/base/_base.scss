@@ -1,4 +1,8 @@
-body {}
+body {
+  @include breakpoint(max-width $medium) {
+    margin-top: 54px;
+  }
+}
 
 .container {
   &:after {
@@ -7,7 +11,16 @@ body {}
     display: block;
   }
 }
+main {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -268px;
+}
 
+.push {
+  height: 268px;
+}
 .wrapper {
   padding-left: $container-margin;
   padding-right: $container-margin;
@@ -41,4 +54,14 @@ i {
 
 .text-center {
   text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.all-news-link{
+  font-size: 1.1em;
+  line-height: 1.5em;
 }

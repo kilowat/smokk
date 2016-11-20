@@ -2,19 +2,24 @@
 <html>
 
 <head>
-   <meta charset="utf-8">
+  <meta charset="utf-8">
   <title>{{ title }}</title>
   <!-- dev:css -->
   <link rel="stylesheet" href="./css/screen.css">
   <!-- endinject -->
+  <!--slick:css-->
+  <link rel="stylesheet" href="./libs/slick/css/slick.css">
+  <!--endinject-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <header>
-	{% include '../layouts/header.html' %}
+    {% include '../layouts/header.html' %}
   </header>
-  <main> 
-	{% block content %}{% endblock %}
+  <main>
+    {% block content %}{% endblock %}
+    <div class="push"></div>
   </main>
   <footer>
     {% include '../layouts/footer.html' %}
@@ -28,6 +33,9 @@
   <!--endinject-->
   <!--bxslider:js-->
   <script src="./libs/bxslider/js/jquery.bxslider.js"></script>
+  <!--endinject-->
+  <!--slick:js-->
+  <script src="./libs/slick/js/slick.min.js"></script>
   <!--endinject-->
   <!--dev:js-->
 

@@ -1,4 +1,27 @@
-html{
+html {
   font-family: $base-font-family;
   font-size: $base-font-size;
+}
+
+h1 {}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: $rubik;
+  margin-bottom: 1.6em;
+  line-height: 1.2em;
+  @include breakpoint(max-width $small){
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+}
+p{
+  padding-bottom: 2em;
+  @include breakpoint(max-width $small){
+    padding-bottom: 0.5em;
+  }
+}
+b{
+  font-weight: 600;
 }

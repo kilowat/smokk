@@ -1,0 +1,72 @@
+footer {
+  min-height: 380px;
+  background-color: #000000;
+  .wrapper {
+    background-color: #000000;
+    .bottom-menu-wrapper {
+      padding-top: 35px;
+      @include container;
+      .coll {
+        @include gallery(1 of 4 1/7);
+        >ul>li>a {
+          font-size: 1.2em;
+          font-weight: 600;
+          padding-bottom: 20px;
+          display: inline-block;
+        }
+        a {
+          line-height: 1.5em;
+          text-decoration: none;
+          color: #fff;
+          &:hover,
+          &.selected {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+  .bottom-contact-row {
+    margin-top: 55px;
+    border-bottom: 1px solid #252525;
+    padding-bottom: 15px;
+    @include container;
+    .cell {
+      @include gallery(1 of 3 0);
+    }
+    .contact-bottom{
+      color: #fff;
+      >div{
+        margin-bottom: 10px;
+      }
+    }
+    .feed-back-button {
+      color: #bed8e6;
+      background-color: transparent;
+      font-size: 1.1em;
+      border: 1px solid;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: #bed8e6;
+        color: #000;
+      }
+    }
+  }
+  .bottom-line{
+    padding-top: 15px;
+    line-height: 1.7em;
+    font-size: 0.7em;
+    .coop{
+      float: left;
+      color: #fff;
+    }
+    .dev{
+      float: right;
+      color: #fff;
+      text-align: right;
+    }
+  }
+}

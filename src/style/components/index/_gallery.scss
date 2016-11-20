@@ -1,0 +1,39 @@
+.gallery {
+  margin-bottom: 75px;
+  .gallery-list {
+    margin-bottom: 20px;
+    @include container;
+    .item {
+      height: 142px;
+      cursor: pointer;
+      position: relative;
+      @include gallery(1 of 5 0);
+      @include breakpoint(max-width 950px) {
+        @include gallery(1 of 4 0);
+      }
+      @include breakpoint(max-width $small) {
+        @include gallery(1 of 3 0);
+      }
+      @include breakpoint(max-width $ex-small) {
+        @include gallery(1 of 2 0);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        &:hover {
+          position: absolute;
+          width: 110%;
+          height: 110%;
+          z-index: 1;
+          top: -5%;
+          left: -5%;
+          padding: 4px;
+          background-color: #fff;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

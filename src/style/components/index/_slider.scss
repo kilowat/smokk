@@ -217,18 +217,27 @@ ul.bxslider {
 
 #slider {
   position: relative;
-  .bx-wrapper .bx-controls-direction a{
-    top:89%;
+  .bx-wrapper .bx-controls-direction a {
+    top: 89%;
   }
   .bx-prev {
-     left: 46.5%;
+    left: 46.5%;
+    @include breakpoint(max-width 920px) {
+      left: 44.5%;
+    }
+    @include breakpoint(max-width 810px) {
+      left: 41.5%;
+    }
+    @include breakpoint(max-width 722px) {
+      left: 38.5%;
+    }
     @include sprite($ic_left-arrow);
     &:hover {
       @include sprite($ic_left-arrow-hover);
     }
   }
   .bx-next {
-     right: 45%;
+    right: 45%;
     @include sprite($ic_right-arrow);
     &:hover {
       @include sprite($ic_right-arrow-hover);
@@ -243,6 +252,9 @@ ul.bxslider {
       font-size: 2.4em;
       font-weight: 900;
       margin-bottom: 35px;
+      @include breakpoint(max-width 974px) {
+        font-size: 1.2em;
+      }
     }
     .slide-text {
       line-height: 1.4em;
@@ -263,8 +275,8 @@ ul.bxslider {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .btn-news-detail{
-   margin-top: 90px;
+  .btn-news-detail {
+    margin-top: 90px;
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -272,7 +284,7 @@ ul.bxslider {
     padding: 15px;
     background-color: #00923f;
     display: inline-block;
-    i{
+    i {
       margin-left: 10px;
       position: relative;
       top: 2px;
@@ -293,6 +305,9 @@ ul.bxslider {
   height: 410px;
   background-color: rgba(6, 105, 169, 0.7);
   a {
+    @include breakpoint(max-width 974px) {
+      font-size: 1.2em;
+    }
     margin-bottom: 10px;
     color: #fff;
     font-size: 1.7em;
@@ -325,5 +340,28 @@ ul.bxslider {
     position: relative;
     left: -15px;
     top: 6px;
+  }
+}
+
+@include breakpoint(max-width 702px) {
+  #slider .slide-item{
+    height: 350px;
+  }
+  #slider .slider-content{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  #bx-pager {
+    display: none;
+  }
+  #slider .bx-prev {
+    left: 10%;
+  }
+  #slider .bx-next {
+    right: 10%;
+  }
+  #slider .btn-news-detail {
+    margin-top: 20px;
   }
 }

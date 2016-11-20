@@ -1,0 +1,46 @@
+.slick-prev {
+  position: absolute;
+  left: -30px;
+  top: 42%;
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  @include sprite($ic_left-arrow);
+}
+
+.slick-next {
+  position: absolute;
+  right: -30px;
+  top: 42%;
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  @include sprite($ic_right-arrow);
+}
+.slick-dots{
+  margin-left: 43%;
+  margin-top: 10px;
+  li{
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    button{
+      font-size: 0;
+      border-radius: 100%;
+      height: 10px;
+      width: 10px;
+      border: 1px solid #b0c9d8;
+      padding: 0;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    &.slick-active{
+      button{
+        background-color: #007cc2;
+        border: 1px solid #007cc2;
+      }
+    }
+  }
+}

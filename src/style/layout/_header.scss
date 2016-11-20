@@ -6,16 +6,20 @@ header {
   }
   //start for mobile
   .top-line {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: none;
     background-color: #2196f3;
     color: #fff;
+    z-index: 2;
     @include breakpoint(max-width $medium) {
       display: block;
     }
     .wrapper {
       background-color: #2196f3;
     }
-    .mini-logo{
+    .mini-logo {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
@@ -29,9 +33,6 @@ header {
           width: 10%;
           padding-right: 16px;
         }
-        &:nth-child(2) {
-          width: 8%;
-        }
         &:nth-child(3) {
           width: 80%;
           text-align: right;
@@ -42,7 +43,8 @@ header {
       }
       .cell-line {
         display: table-cell;
-        padding-left: 16px;
+        padding-left: 10px;
+        text-align: right;
         vertical-align: middle;
       }
       .mobile-phones {
@@ -55,15 +57,18 @@ header {
       .mobile-search {
         input[type=text] {
           width: 70%;
-          box-sizing: border-box;
           border-radius: 3px;
           border: 0;
           height: 26px;
+          
+          //display: none;
         }
         .mobile-search-btn {
           background-color: transparent;
           border: 0;
           cursor: pointer;
+          position: relative;
+          top: 2px;
         }
       }
       .mobile-feedback {

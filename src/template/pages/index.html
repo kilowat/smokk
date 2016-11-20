@@ -1,19 +1,40 @@
 {% extends './../layouts/master.html' %} {% block content %}
 <div class="wrapper">
   <!--start component slider-->
-  {% include '.././components/slider.html' %}
+  {% include '.././components/index/slider.html' %}
   <!--end component slider-->
 
   <!--start component city info-->
-  <div class="city-info">
-    <ul>
-      <li><div><span class="number">7</span><span class="word">городских округов</span></div></li>
-      <li><div><span class="number">37</span><span class="word">муниципальных районов</span></div></li>
-      <li><div><span class="number">27</span><span class="word">городских поселений</span></div></li>
-      <li><div><span class="number">116</span><span class="word">сельских поселений</span></div></li>
-    </ul>
-  </div>
+  {% include '.././components/index/city-info.html' %}
   <!--end component city info-->
-</div>
 
+  <!--start component city map-->
+  {% include '.././components/index/city-map.html' %}
+  <!--end component city map-->
+
+  <!--start component news slider-->
+  {% include '.././components/index/news-slider.html' %}
+  <!--end component news slider-->
+  
+  <!--start include about-->
+  {% include '.././components/index/about.html' %}
+  <!--end include about-->
+  
+  <!--start component link list-->
+  {% include '.././components/index/link-list.html' %}
+  <!--end component link list-->
+  
+  <!--start component magazin list-->
+  {% include '.././components/index/magazin-list.html' %}
+  <!--end component magazin list-->
+  
+  <!--start component gallery-->
+  {% include '.././components/index/gallery.html' %}
+  <!--end component gallery-->
+</div>
+<!--start component ya-map-->
+<div class="ya-map">
+  
+</div>
+<!--end component ya-map-->
 {% endblock %}

@@ -1,0 +1,66 @@
+.magazins {
+  margin-bottom: 70px;
+  .magazin-list {
+    margin-bottom: 20px;
+    @include container;
+    .item {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      margin-bottom: 2px;
+      @include gallery(1 of 6 0.02);
+      @include breakpoint(max-width 950px) {
+        @include gallery(1 of 3 0.02);
+      }
+      @include breakpoint(max-width $small) {
+        @include gallery(1 of 2 0.02);
+      }
+      height: 225px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        .item-wrapper {
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+        .name {
+          display: inline-block;
+        }
+      }
+      .item-wrapper {
+        vertical-align: middle;
+        height: 225px;
+        width: 100%;
+        .table-cell {
+          vertical-align: middle;
+        }
+      }
+      .name {
+        display: none;
+        color: #fff;
+        font-size: 1.4em;
+        font-weight: 600;
+        position: relative;
+        &:before {
+          display: block;
+          content: "";
+          width: 50px;
+          height: 1px;
+          background-color: #fff;
+          position: absolute;
+          top: -5px;
+          left: 30%;
+        }
+        &:after {
+          display: block;
+          content: "";
+          width: 50px;
+          height: 1px;
+          background-color: #fff;
+          position: absolute;
+          bottom: -5px;
+          left: 30%;
+        }
+      }
+    }
+  }
+}
