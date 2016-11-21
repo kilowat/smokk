@@ -395,7 +395,7 @@ header .top-line .table .mobile-search input[type=text] {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3) inset;
-  height: 26px;
+  height: 28px;
   padding-left: 5%;
   position: relative;
   top: -3px;
@@ -408,7 +408,7 @@ header .top-line .table .mobile-search .mobile-search-btn {
   cursor: pointer;
   position: relative;
   top: 5px;
-  left: -10px;
+  left: -5px;
 }
 
 header .top-line .table .mobile-feedback button {
