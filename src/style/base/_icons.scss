@@ -25,3 +25,21 @@
 .ic_triangle{
   @include sprite($ic_triangle);
 }
+.ic_vk{
+  @include sprite($ic_vk);
+  &:hover{
+    @include sprite($ic_vk-hover);
+  }
+}
+.ic_fb{
+  @include sprite($ic_fb);
+  &:hover{
+    @include sprite($ic_fb-hover);
+  }
+}
+.ic_youtube{
+  @include sprite($ic_youtube);
+  &:hover{
+    @include sprite($ic_youtube-hover);
+  }
+}

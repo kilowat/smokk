@@ -31,11 +31,14 @@
   margin-top: 15px;
   cursor: pointer;
   left: 15px;
-  position: absolute;
+  position: fixed;
   background-image: url(../images/ic_open.png);
   z-index: 100;
+  display: none;
+  @include breakpoint(max-width $medium){
+    display: block;
+  }
 }
-
 .drawer-close,
 .drawer-hamburger {
   width: 24px;
@@ -54,4 +57,5 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 2;
 }

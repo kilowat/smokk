@@ -11,22 +11,55 @@ body {
     display: block;
   }
 }
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 main {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -268px;
+  margin: 0 auto -4em;
 }
 
+footer,
 .push {
-  height: 268px;
+  height: 4em;
 }
+
 .wrapper {
   padding-left: $container-margin;
   padding-right: $container-margin;
   max-width: $max-width;
   min-width: $min-width;
   margin: auto;
+}
+
+.loader-process {
+  position: relative;
+  &:before {
+    color: black;
+    content: "Загрузка";
+    display: block;
+    font-size: 20px;
+    left: 46%;
+    opacity: 1;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+  }
+  .bx-wrapper{
+    opacity: 0;
+  }
+  #bx-pager{
+    opacity: 0;
+  }
 }
 
 a {
@@ -55,13 +88,16 @@ i {
 .text-center {
   text-align: center;
 }
-.text-left{
+
+.text-left {
   text-align: left;
 }
-.text-right{
+
+.text-right {
   text-align: right;
 }
-.all-news-link{
+
+.all-news-link {
   font-size: 1.1em;
   line-height: 1.5em;
 }

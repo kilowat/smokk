@@ -1,10 +1,16 @@
 footer {
   min-height: 380px;
+  @include breakpoint(max-width 890px) {
+    min-height: auto;
+  }
   background-color: #000000;
   .wrapper {
     background-color: #000000;
     .bottom-menu-wrapper {
       padding-top: 35px;
+      @include breakpoint(max-width 890px) {
+        display: none;
+      }
       @include container;
       .coll {
         @include gallery(1 of 4 1/7);
@@ -27,16 +33,38 @@ footer {
     }
   }
   .bottom-contact-row {
-    margin-top: 55px;
+    padding-top: 55px;
     border-bottom: 1px solid #252525;
     padding-bottom: 15px;
     @include container;
+    @include breakpoint(max-width 890px) {
+      padding-top: 15px;
+    }
     .cell {
       @include gallery(1 of 3 0);
+      &.text-right {
+        margin-top: 15px;
+      }
+      @include breakpoint(max-width 890px) {
+         @include gallery(1 of 1 0);
+        float: none;
+        text-align: center;
+      }
     }
-    .contact-bottom{
+    .soc-icons {
+      margin-top: 20px;
+      li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+    .contact-bottom {
       color: #fff;
-      >div{
+      >div {
         margin-bottom: 10px;
       }
     }
@@ -55,18 +83,31 @@ footer {
       }
     }
   }
-  .bottom-line{
+  .bottom-line {
     padding-top: 15px;
     line-height: 1.7em;
     font-size: 0.7em;
-    .coop{
+    min-height: 40px;
+    .coop {
       float: left;
       color: #fff;
     }
-    .dev{
+    .dev {
       float: right;
       color: #fff;
       text-align: right;
+    }
+    @include breakpoint(max-width $small){
+      .coop{
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .dev{
+        float: none;
+        text-align: center;
+        padding-bottom: 10px;
+      }
     }
   }
 }
