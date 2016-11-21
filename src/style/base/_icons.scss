@@ -43,3 +43,11 @@
     @include sprite($ic_youtube-hover);
   }
 }
+.ic_open{
+  @include sprite($ic_open-menu);
+  cursor: pointer;
+}
+.ic_open.drop-menu-closed{
+  @include sprite($ic_drop-menu-is-close);
+  cursor: pointer;
+}

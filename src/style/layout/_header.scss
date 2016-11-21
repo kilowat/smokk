@@ -56,13 +56,15 @@ header {
       }
       .mobile-search {
         input[type=text] {
-          width: 65%;
+          background-color: #fff;
+          border: 0 none;
           border-radius: 5px;
-          border: 0;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3) inset;
           height: 26px;
           padding-left: 5%;
-          background-color: aliceblue;
-          
+          position: relative;
+          top: -3px;
+          width: 65%;
           //display: none;
         }
         .mobile-search-btn {
@@ -70,7 +72,8 @@ header {
           border: 0;
           cursor: pointer;
           position: relative;
-          top: 2px;
+          top: 5px;
+          left: -10px;
         }
       }
       .mobile-feedback {
