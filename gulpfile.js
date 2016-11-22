@@ -28,6 +28,7 @@ var libs = {
   jquery: libsPath.jquery, // inject name jquery
  // drawer:libsPath.drawer,
   bxslider:libsPath.bxslider,
+  raphael:libsPath.raphael,
   //breakpoint: libsPath.breakpoint,
   // bourbon: libsPath.bourbon
   // bootstrap: libsPath.bootstrap, // inject name bootstrap

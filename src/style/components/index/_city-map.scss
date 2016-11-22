@@ -1,11 +1,21 @@
-.city-map{
+.city-map {
   margin-top: 5em;
   margin-bottom: 30px;
-  h2{
+  position: relative;
+  h2 {
     text-align: center;
   }
-  .container{
-      height: 500px;
-      background-color: #ccc;
+  .container {
+    height: 500px;
+    background-color: #ccc;
+  }
+  #map {
+  }
+  .point {
+    position: absolute;
+    display: none;
+    background-color: transparent;
+  }
+  .point img {
   }
 }

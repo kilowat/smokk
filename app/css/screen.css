@@ -1449,6 +1449,7 @@ ul.bxslider {
 .city-map {
   margin-top: 5em;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .city-map h2 {
@@ -1458,6 +1459,12 @@ ul.bxslider {
 .city-map .container {
   height: 500px;
   background-color: #ccc;
+}
+
+.city-map .point {
+  position: absolute;
+  display: none;
+  background-color: transparent;
 }
 
 .news-slider {

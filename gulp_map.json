@@ -89,5 +89,10 @@
     "js": [
       "src/libs/bxslider/js/jquery.bxslider.js"
     ]
+  },
+  "raphael":{
+    "js":[
+      "src/libs/raphael/raphael.js"
+    ]
   }
 }
