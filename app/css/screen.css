@@ -1443,7 +1443,7 @@ ul.bxslider {
 .city-info ul li .word {
   font-size: 1.5em;
   font-weight: 600;
-  line-height: 1.1rem;
+  line-height: 1.5rem;
 }
 
 .city-map {
@@ -1456,10 +1456,50 @@ ul.bxslider {
   text-align: center;
 }
 
+.city-map .map {
+  float: left;
+  width: 52%;
+}
+
 .city-map .point {
   position: absolute;
   display: none;
   background-color: transparent;
+}
+
+.city-map .city-list {
+  float: left;
+  width: 47%;
+  margin-left: 1%;
+}
+
+.city-map .city-list ul {
+  float: left;
+  vertical-align: top;
+  width: 180px;
+}
+
+.city-map .city-list ul:first-child {
+  width: 108px;
+}
+
+.city-map .city-list ul li {
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+
+.city-map .city-list ul li .head {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.city-map .city-list ul li a {
+  font-size: 0.9em;
+}
+
+.city-map .city-list ul li a.selected {
+  color: #007cc2;
 }
 
 .news-slider {

@@ -6,8 +6,9 @@
     text-align: center;
   }
   .container {}
-  #map {
-
+  .map {
+    float: left;
+    width: 52%;
   }
   .point {
     position: absolute;
@@ -15,4 +16,32 @@
     background-color: transparent;
   }
   .point img {}
+  .city-list {
+    float: left;
+    width: 47%;
+    margin-left: 1%;
+    ul {
+      &:first-child {
+        width: 108px;
+      }
+      float: left;
+      vertical-align: top;
+      width: 180px;
+      li {
+        line-height: 1.5em;
+        .head {
+          margin-bottom: 1em;
+          font-size: 1.2em;
+          font-weight: 600;
+        }
+        margin-bottom: 15px;
+        a {
+          font-size: 0.9em;
+          &.selected {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
 }
