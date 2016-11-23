@@ -27,6 +27,7 @@ $(function () {
     obj
       .hover(function () {
         clearTimeout(timerRemove);
+        $('#' + arr[this.id]).addClass('selected');
         this.animate({
           fill: '#1669AD',
           'stroke-width': 3,
@@ -37,18 +38,19 @@ $(function () {
           'stroke-width': attributes["stroke-width"]
         }, 100);
       })
-      .hover(function () {
-        document.location.hash = arr[this.id];
+      .hover(function (e) {
+        clearTimeout(timerRemove);
+        $('#' + arr[this.id]).addClass('selected');
+
         var point = this.getBBox(0);
 
         $('#map').next('.point').remove();
         $('#map').after($('<div />').addClass('point'));
         $('.point')
-          //.html(paths[arr[this.id]].name)
           .prepend($('<img />').attr('src', imagePath + arr[this.id] + '.png'))
           .css({
-            left: point.x + (point.width / 2) - 80,
-            top: point.y + (point.height / 2) - 20
+            left: point.x,
+            top: point.y
           })
           .fadeIn(100);
       })
@@ -58,7 +60,41 @@ $(function () {
             $('.point').remove();
           });
         }, 10);
-
       })
   }
+  //when city links hovered;
+  (function () {
+    var obj;
+    $('.city-list a').hover(function () {
+      obj = r.path(paths[$(this).attr('id')].path);
+      obj.attr(attributes);
+      obj.animate({
+        fill: '#1669AD',
+        'stroke-width': 3,
+      }, 100);
+    }, function () {
+      obj.animate({
+        fill: attributes.fill,
+        'stroke-width': attributes["stroke-width"]
+      }, 100);
+
+    }).hover(function () {
+      var point = obj.getBBox(0);
+
+      $('#map').next('.point').remove();
+      $('#map').after($('<div />').addClass('point'));
+      $('.point')
+        .prepend($('<img />').attr('src', imagePath + $(this).attr('id') + '.png'))
+        .css({
+          left: point.x,
+          top: point.y
+        })
+        .fadeIn(100);
+    }, function () {
+      $('.point').fadeOut(100, function () {
+        $('.point').remove();
+      });
+    })
+  })()
+
 });
