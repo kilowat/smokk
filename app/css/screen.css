@@ -1456,11 +1456,6 @@ ul.bxslider {
   text-align: center;
 }
 
-.city-map .container {
-  height: 500px;
-  background-color: #ccc;
-}
-
 .city-map .point {
   position: absolute;
   display: none;
