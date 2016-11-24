@@ -1467,6 +1467,11 @@ ul.bxslider {
   background-color: transparent;
 }
 
+.city-map .point img {
+  width: 50px;
+  height: auto;
+}
+
 .city-map .city-list {
   float: left;
   width: 47%;

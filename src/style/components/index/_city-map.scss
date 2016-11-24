@@ -15,7 +15,10 @@
     display: none;
     background-color: transparent;
   }
-  .point img {}
+  .point img {
+	width:50px;
+	height:auto;
+  }
   .city-list {
     float: left;
     width: 47%;
