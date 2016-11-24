@@ -269,7 +269,8 @@ $(function () {
     })
   })()
 
-  $('.city-list').mouseout(function () {
+  $('.city-list').mouseleave(function () {
     setMapHandler();
+	//console.log('set hendler');
   });
 });
