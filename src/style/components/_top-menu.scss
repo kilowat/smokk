@@ -1,28 +1,82 @@
-.top-menu {
-  margin-top: 18px;
-  height: 42px;
-  li {
-    display: inline-block;
-    margin-left: 19px;
-    margin-right: 12px;
-    &:last-child {
-      margin-right: 0;
-    }
-    @include breakpoint(max-width 1005px){
-      margin-right: 13px;
-      margin-left: 13px;
-    }
-    a {
-      padding-left: 3px;
-      padding-right: 3px;
-      text-decoration: none;
-      font-size: 1.1em;
-      padding-bottom: 18px;
-      &.selected,
-      &:hover {
-        color: #007cc2;
-        border-bottom: 4px solid;
+  .top-menu {
+    margin-top: 18px;
+    height: 42px;
+    >li {
+      position: relative;
+      display: inline-block;
+      margin-left: 19px;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include breakpoint(max-width 1005px) {
+        margin-right: 13px;
+        margin-left: 13px;
+      }
+      >a {
+        padding-left: 3px;
+        padding-right: 3px;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding-bottom: 19px;
+        &.selected,
+        &:hover {
+          color: #007cc2;
+          border-bottom: 4px solid;
+          &+ul {
+            display: block;
+          }
+        }
+      }
+      >ul {
+        bottom: -155px;
+        left: -15px;
+        position: absolute;
+        min-width: 200px;
+        z-index: 1;
+        display: none;
+        &:hover {
+          display: block;
+        }
+        &:before {
+          content: "";
+          display: block;
+          height: 25px;
+          position: absolute;
+          top: -25px;
+          width: 100px;
+          z-index: 2;
+        }
+        >li {
+          >a {
+            display: block;
+            padding: 15px;
+            font-size: 0.9em;
+            text-decoration: none;
+            background-color: #007cc2;
+            color: #fff;
+            position: relative;
+            &:hover,
+            .selected {
+              background-color: #e10e7c;
+            }
+            &:after {
+              display: block;
+              content: "";
+              height: 1px;
+              width: 40%;
+              background-color: #fff;
+              position: absolute;
+              bottom: 0px;
+              left: 15px;
+            }
+          }
+          &:last-child {
+            a:after {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
-}

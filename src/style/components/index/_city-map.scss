@@ -10,14 +10,17 @@
     float: left;
     width: 52%;
   }
+  #map {
+    display: inline-block;
+  }
   .point {
     position: absolute;
     display: none;
     background-color: transparent;
   }
   .point img {
-	width:50px;
-	height:auto;
+    width: 50px;
+    height: auto;
   }
   .city-list {
     float: left;
@@ -46,5 +49,29 @@
         }
       }
     }
+  }
+  @include breakpoint(max-width 1068px) {
+    .city-list {
+      float: none;
+      width: 100%;
+      display: none;
+    }
+    .container{
+      text-align: center;
+    }
+    h2{
+      margin-bottom: 0;
+    }
+    .map {
+      position: relative;
+      float: none;
+      width: 530px;
+      display: inline-block;
+      padding-top: 55px;
+      padding-bottom: 10px;
+    }
+  }
+  @include breakpoint(max-widht 570px){
+    
   }
 }

@@ -828,34 +828,92 @@ footer .bottom-line .dev {
   height: 42px;
 }
 
-.top-menu li {
+.top-menu > li {
+  position: relative;
   display: inline-block;
   margin-left: 19px;
   margin-right: 12px;
 }
 
-.top-menu li:last-child {
+.top-menu > li:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 1005px) {
-  .top-menu li {
+  .top-menu > li {
     margin-right: 13px;
     margin-left: 13px;
   }
 }
 
-.top-menu li a {
+.top-menu > li > a {
   padding-left: 3px;
   padding-right: 3px;
   text-decoration: none;
   font-size: 1.1em;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
 }
 
-.top-menu li a.selected, .top-menu li a:hover {
+.top-menu > li > a.selected, .top-menu > li > a:hover {
   color: #007cc2;
   border-bottom: 4px solid;
+}
+
+.top-menu > li > a.selected + ul, .top-menu > li > a:hover + ul {
+  display: block;
+}
+
+.top-menu > li > ul {
+  bottom: -155px;
+  left: -15px;
+  position: absolute;
+  min-width: 200px;
+  z-index: 1;
+  display: none;
+}
+
+.top-menu > li > ul:hover {
+  display: block;
+}
+
+.top-menu > li > ul:before {
+  content: "";
+  display: block;
+  height: 25px;
+  position: absolute;
+  top: -25px;
+  width: 100px;
+  z-index: 2;
+}
+
+.top-menu > li > ul > li > a {
+  display: block;
+  padding: 15px;
+  font-size: 0.9em;
+  text-decoration: none;
+  background-color: #007cc2;
+  color: #fff;
+  position: relative;
+}
+
+.top-menu > li > ul > li > a:hover,
+.top-menu > li > ul > li > a .selected {
+  background-color: #e10e7c;
+}
+
+.top-menu > li > ul > li > a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 40%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+.top-menu > li > ul > li:last-child a:after {
+  display: none;
 }
 
 .slick-prev {
@@ -1461,6 +1519,10 @@ ul.bxslider {
   width: 52%;
 }
 
+.city-map #map {
+  display: inline-block;
+}
+
 .city-map .point {
   position: absolute;
   display: none;
@@ -1505,6 +1567,28 @@ ul.bxslider {
 
 .city-map .city-list ul li a.selected {
   color: #007cc2;
+}
+
+@media (max-width: 1068px) {
+  .city-map .city-list {
+    float: none;
+    width: 100%;
+    display: none;
+  }
+  .city-map .container {
+    text-align: center;
+  }
+  .city-map h2 {
+    margin-bottom: 0;
+  }
+  .city-map .map {
+    position: relative;
+    float: none;
+    width: 530px;
+    display: inline-block;
+    padding-top: 55px;
+    padding-bottom: 10px;
+  }
 }
 
 .news-slider {
