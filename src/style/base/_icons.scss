@@ -51,3 +51,9 @@
   @include sprite($ic_drop-menu-is-close);
   cursor: pointer;
 }
+.ic_triangle-2{
+  @include sprite($ic_triangle-2);
+}
+.ic_triangle-2-hover{
+  @include sprite($ic_triangle-2-hover);
+}

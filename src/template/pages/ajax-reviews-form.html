@@ -1,0 +1,67 @@
+<div class="ajax-reviews-form">
+  <h2>Написать нам</h2>
+
+  <form action="" method="post">
+    <div class="inputs-wrapper">
+      <div class="row">
+        <div class="cell">
+          <input type="text" data-validation="length" data-validation-length="min3" placeholder="Фамилия" data-validation-error-msg=" ">
+        </div>
+        <div class="cell">
+          <input type="text" data-validation="length" data-validation-length="min3" placeholder="Имя" data-validation-error-msg=" ">
+        </div>
+        <div class="cell">
+          <input type="text" data-validation="length" data-validation-length="min3" placeholder="Отчество" data-validation-error-msg=" ">
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">
+          <input type="text" ata-validation="alphanumeric" data-validation-allowing="-_" placeholder="Номер телефона" data-validation-error-msg=" ">
+        </div>
+        <div class="cell">
+          <input type="text" data-validation="email" placeholder="Email" data-validation-error-msg=" ">
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Текст сообщения" data-validation="length" data-validation-length="min5" data-validation-error-msg=" "></textarea>
+        </div>
+      </div>
+      <div class="row bottom-row">
+        <div class="cell">
+          <div class="table">
+            <div class="input-block">
+              <span class="capcha-label">Введите код безопастности</span>
+            </div>
+            <div class="input-block text-center">
+              <div class="capcha-img">
+                33434
+              </div>
+            </div>
+            <div class="input-block capcha-input">
+              <input type="text" placeholder="Код">
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="table">
+            <div class="input-block">
+              <button type="submit" class="base-btn green send">Отправить <i class="ic_triangle-2"></i></button>
+            </div>
+            <div class="input-block text-right">
+              <input type="reset" value="Очистить форму" class="clear-form">
+            </div>
+            <div class="input-block text-right">
+              <a href="" title="Закрыть" class="close-form">Закрыть</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+  $.validate({
+    scrollToTopOnError: false
+  });
+</script>

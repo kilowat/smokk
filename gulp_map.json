@@ -94,5 +94,18 @@
     "js":[
       "src/libs/raphael/raphael.js"
     ]
+  },
+  "formValidator":{
+	"js":[
+	"src/libs/formValidator/jquery.form-validator.min.js"
+	]
+  },
+  "msgBox":{
+	"js":[
+		"src/libs/msgBox/js/lobibox.min.js"
+	],
+	"css":[
+		"src/libs/msgBox/css/lobibox.min.css"
+	]
   }
 }

@@ -10,6 +10,9 @@
   <!--slick:css-->
   <link rel="stylesheet" href="./libs/slick/css/slick.css">
   <!--endinject-->
+  <!--msgBox:css-->
+  <link rel="stylesheet" href="./libs/msgBox/css/lobibox.min.css">
+  <!--endinject-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -49,7 +52,7 @@
                   <div>+7 (861) 275-10-50</div>
                   <div>+7 (861) 275-12-56</div>
                 </div>
-                <div class="cell-line mobile-feedback">
+                <div class="cell-line mobile-feedback show-feedback-box">
                   <button><i class="ic_note-hover"></i></button>
                 </div>
               </div>
@@ -90,7 +93,7 @@
             <!--end include contact address-->
           </div>
           <div class="feedback-block">
-            <button class="feedback-btn">Написать нам <i class="ic_note"></i></button>
+            <button class="feedback-btn show-feedback-box">Написать нам <i class="ic_note"></i></button>
           </div>
         </div>
       </div>
@@ -210,6 +213,7 @@
           <div class="map">
             <div id="map"></div>
           </div>
+          <script src="./libs/raphael/js/raphael.js"></script>
           <div class="city-list">
             <ul>
               <li><span class="head">Города</span></li>
@@ -220,7 +224,7 @@
                 <a href="" id="Anapa" title="Анапа">Анапа</a>
               </li>
               <li>
-                <a href="" id="Krasnodar" title="Армавир">Армавир</a>
+                <a href="" id="Armovir" title="Армавир">Армавир</a>
               </li>
               <li>
                 <a href="" id="Gelendzhik" title="Геленджик">Геленджик</a>
@@ -288,8 +292,6 @@
               <li>
                 <a href="" id="Kurganinsky" title="Курганинский район">Курганинский район</a>
               </li>
-            </ul>
-            <ul>
               <li>
                 <a href="" id="Kuchevskiy" title="Кущевский район">Кущевский район</a>
               </li>
@@ -350,8 +352,33 @@
               </li>
             </ul>
           </div>
+          <div class="mobily-city-list">
+            <div class="city-block">
+              <label for="city">Города</label>
+              <select name="city" id="city">
+          <option value="Krasnodar">Краснодар</option>
+          <option value="Krasnodar">Краснодар</option>
+          <option value="Krasnodar">Краснодар</option>
+          <option value="Krasnodar">Краснодар</option>
+          <option value="Krasnodar">Краснодар</option>
+          <option value="Krasnodar">Краснодар</option>
+        </select>
+            </div>
+            <div class="city-block">
+              <label for="">Районы</label>
+              <select name="raions" id="raions">
+          <option value="Abinskiy">Абинский район</option>
+          <option value="Abinskiy">Абинский район</option>
+          <option value="Abinskiy">Абинский район</option>
+          <option value="Abinskiy">Абинский район</option>
+          <option value="Abinskiy">Абинский район</option>
+          <option value="Abinskiy">Абинский район</option>
+        </select>
+            </div>
+          </div>
         </div>
       </div>
+
       <!--end component city map-->
 
       <!--start component news slider-->
@@ -1678,16 +1705,21 @@
   <!--jquery:js-->
   <script src="./libs/jquery/js/jquery.min.js"></script>
   <!--endinject-->
-  <!--drawer:js-->
-  <!--endinject-->
   <!--bxslider:js-->
   <script src="./libs/bxslider/js/jquery.bxslider.js"></script>
   <!--endinject-->
   <!--slick:js-->
   <script src="./libs/slick/js/slick.min.js"></script>
   <!--endinject-->
+  <!--formValidator:js-->
+  <script src="./libs/formValidator/js/jquery.form-validator.min.js"></script>
+  <script src="./libs/formValidator/js/ru.js"></script>
+  <!--endinject-->
   <!--raphael:js-->
   <script src="./libs/raphael/js/raphael.js"></script>
+  <!--endinject-->
+  <!--msgBox:js-->
+  <script src="./libs/msgBox/js/lobibox.min.js"></script>
   <!--endinject-->
   <!--dev:js-->
 

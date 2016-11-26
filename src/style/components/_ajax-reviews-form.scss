@@ -1,0 +1,153 @@
+.ajax-reviews-form {
+  $smallSize: 750px;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  @include breakpoint(max-width $smallSize) {
+    font-size: 0.9em;
+  }
+  .inputs-wrapper {
+    .row {
+      @include container;
+      &:first-child {
+        .cell {
+          @include span(1 of 3 1/30 inside);
+          @include breakpoint(max-width $smallSize) {
+            float: none;
+            width: 100%;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .cell {
+          @include span(1 of 2 1/45 inside);
+        }
+      }
+      &:nth-child(3) {
+        .cell {
+          @include span(1 of 1 1/90 inside);
+        }
+      }
+      &:nth-child(4) {
+        .cell {
+          @include span(1 of 2 1/45 inside);
+          @include breakpoint(max-width $smallSize) {
+            float: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .cell {
+    input[type=text] {
+      margin-bottom: 15px;
+    }
+    input[type=text],
+    textarea {
+      font-size: 1em;
+      width: 100%;
+      height: 43px;
+      @include breakpoint(max-width $smallSize) {
+        height: 30px;
+      }
+    }
+    textarea {
+      height: 150px;
+      padding-top: 10px;
+      padding-left: 2%;
+      width: 100%;
+      @include breakpoint(max-width $smallSize) {
+        height: 80px;
+      }
+    }
+  }
+  .bottom-row {
+    margin-top: 15px;
+    .table {
+      width: 100%;
+      .input-block {
+        display: table-cell;
+        vertical-align: middle;
+        @include breakpoint(max-width $smallSize) {
+          display: block;
+          text-align: center;
+        }
+        .capcha-label {
+          font-style: italic;
+          color: #b9b9b9;
+        }
+        .capcha-img {
+          padding-left: 10px;
+          padding-right: 10px;
+          @include breakpoint(max-width $smallSize) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+        .capcha-input {
+          max-width: 200px;
+        }
+        .clear-form,
+        .close-form {
+          border-bottom: 1px dashed;
+          border-left: 0;
+          border-top: 0;
+          border-right: 0;
+          background-color: transparent;
+          text-decoration: none;
+          display: inline-block;
+          padding: 0;
+          font-size: 1em;
+          cursor: pointer;
+          &:hover {
+            color: $link-hover-color;
+          }
+          @include breakpoint(max-width $smallSize) {
+            display: none;
+          }
+        }
+        .send {
+          height: 43px;
+          i {
+            margin-left: 15px;
+            position: relative;
+            top: 3px;
+          }
+          &:hover {
+            i {
+              @include sprite($ic_triangle-2-hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-box {
+  background-color: #fff;
+  border: none;
+  &.lobibox.lobibox-window .lobibox-header {
+    background-color: #fff;
+  }
+  &.lobibox.lobibox-window {
+    border: none;
+    border-radius: 0;
+  }
+  &.lobibox.lobibox-window .lobibox-body {
+    background-color: #fff;
+  }
+  &.lobibox .lobibox-header .btn-close {
+    @include sprite($ic_box-close);
+    background-color: rgba(180, 201, 214, 0.6);
+    border-radius: 100%;
+    font-size: 0;
+    position: absolute;
+    right: -18px;
+    top: -19px;
+    z-index: 2;
+  }
+}

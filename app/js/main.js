@@ -37,6 +37,18 @@ $(document).ready(function () {
       }
     ]
   });
-  
-  
+
+  $.validate({
+    scrollToTopOnError: false
+  });
+  $('header .show-feedback-box').click(function () {
+    Lobibox.window({
+      title: false,
+      loadMethod: 'GET',
+      width: $('.wrapper').first().width() || 900,
+      height: 'auto',
+      url: '/ajax-reviews-form.html',
+      baseClass: "custom-box",
+    });
+  });
 });

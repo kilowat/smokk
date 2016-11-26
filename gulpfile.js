@@ -29,10 +29,12 @@ var libs = {
  // drawer:libsPath.drawer,
   bxslider:libsPath.bxslider,
   raphael:libsPath.raphael,
+  msgBox:libsPath.msgBox,
   //breakpoint: libsPath.breakpoint,
   // bourbon: libsPath.bourbon
   // bootstrap: libsPath.bootstrap, // inject name bootstrap
   slick: libsPath.slick, // inject name slick
+  formValidator: libsPath.formValidator
   //select:libsPath.select,
   //fancybox:libsPath.fancybox,
   //cropper:libsPath.cropper,

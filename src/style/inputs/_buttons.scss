@@ -1,0 +1,18 @@
+.base-btn {
+  background-color: #fff;
+  border: 1px solid;
+  color: #000;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  height: 46px;
+  line-height: 2em;
+  width: 100%;
+  &.green {
+    color: #00923f;
+    &:hover {
+      background-color: #1a923f;
+      color: #fff;
+    }
+  }
+}
