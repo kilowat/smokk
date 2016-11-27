@@ -10,6 +10,7 @@ $(document).ready(function () {
     "slidesToScroll": 1,
     dots: true,
   });
+
   $('#link-slider').slick({
     "slidesToShow": 4,
     "slidesToScroll": 4,
@@ -41,6 +42,7 @@ $(document).ready(function () {
   $.validate({
     scrollToTopOnError: false
   });
+
   $('header .show-feedback-box').click(function () {
     Lobibox.window({
       title: false,
@@ -51,4 +53,8 @@ $(document).ready(function () {
       baseClass: "custom-box",
     });
   });
+
+  //customize select
+  $('select').selectize();
+
 });

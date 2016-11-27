@@ -45,7 +45,7 @@
   },
   "select": {
     "js": [
-		"src/libs/customselect/js/selectize.min.js"
+		"src/libs/select/js/selectize.min.js"
 	  ]
   },
   "cropper": {

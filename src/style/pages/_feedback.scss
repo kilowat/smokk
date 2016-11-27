@@ -1,0 +1,133 @@
+.feedback-page {
+  .feedback-form {
+    .head {
+      font-weight: 600;
+      margin-bottom: 1.2em;
+      display: inline-block;
+    }
+    >.row:nth-child(2) {
+      margin-bottom: 0;
+    }
+    .help-text {
+      font-size: 0.9em;
+      color: #ddd;
+    }
+    .row {
+      margin-bottom: 20px;
+      input {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+      }
+      textarea {
+        font-family: $base-font-family;
+        height: 200px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .person-info {
+        @include container;
+        >.cell:first-child {
+          float: left;
+          width: 58%;
+          margin-right: 2%;
+        }
+        >.cell:nth-child(2) {
+          float: left;
+          width: 40%;
+        }
+      }
+      .buttons {
+        .buttons-row {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    .address-info {
+      @include container;
+      >.cell:first-child {
+        float: left;
+        width: 55%;
+        margin-right: 2%;
+      }
+      >.cell:nth-child(2) {
+        float: left;
+        width: 43%
+      }
+    }
+  }
+  .bottom-row {
+    $smallSize: 750px;
+    margin-top: 15px;
+    @include container;
+    .cell {
+      box-sizing: border-box;
+      float: left;
+      padding-left: 0.54348%;
+      padding-right: 0.54348%;
+      width: 50%;
+    }
+    .table {
+      width: 100%;
+      .input-block {
+        display: table-cell;
+        vertical-align: middle;
+        @include breakpoint(max-width $smallSize) {
+          display: block;
+          text-align: center;
+        }
+        .capcha-label {
+          font-style: italic;
+          color: #b9b9b9;
+        }
+        .capcha-img {
+          padding-left: 10px;
+          padding-right: 10px;
+          @include breakpoint(max-width $smallSize) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+        .capcha-input {
+          max-width: 200px;
+        }
+        .clear-form,
+        .close-form {
+          border-bottom: 1px dashed;
+          border-left: 0;
+          border-top: 0;
+          border-right: 0;
+          background-color: transparent;
+          text-decoration: none;
+          display: inline-block;
+          padding: 0;
+          font-size: 1em;
+          cursor: pointer;
+          line-height: 1.2em;
+          &:hover {
+            color: $link-hover-color;
+          }
+          @include breakpoint(max-width $smallSize) {
+            display: none;
+          }
+        }
+        .clear-form {
+          width: 124px;
+        }
+        .send {
+          height: 43px;
+          i {
+            margin-left: 15px;
+            position: relative;
+            top: 3px;
+          }
+          &:hover {
+            i {
+              @include sprite($ic_triangle-2-hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}

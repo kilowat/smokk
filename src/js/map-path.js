@@ -197,7 +197,7 @@ $(function () {
     },
     arr = new Array();
   var offsetLeft = 5;
-  var offsetTop = 1;
+  var offsetTop = -15;
 
   setMapHandler();
 
@@ -222,8 +222,6 @@ $(function () {
           $('#' + arr[this.id]).removeClass('selected');
         })
         .hover(function (e) {
-          clearTimeout(timerRemove);
-
           var point = this.getBBox(0);
 
           $('#map').next('.point').remove();
@@ -239,16 +237,17 @@ $(function () {
         .mouseout(function () {
           timerRemove = setTimeout(function () {
             $('.point').fadeOut(100, function () {
-              //$('.point').remove();
+              //
             });
           }, 10);
         })
     }
   }
 
-  //when city links hovered;
+  //when a links is hovered in ul list;
   (function () {
     var ob;
+    
     $('.city-list a').hover(function () {
       ob = r.path(paths[$(this).attr('id')].path);
       ob.attr(attributes);
@@ -276,13 +275,13 @@ $(function () {
         .fadeIn(100);
     }, function () {
       $('.point').fadeOut(100, function () {
-        //$('.point').remove();
+        //to do
       });
     })
   })()
 
   $('.city-list').mouseleave(function () {
     setMapHandler();
-    //console.log('set hendler');
+
   });
 });

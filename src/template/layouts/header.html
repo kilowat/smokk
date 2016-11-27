@@ -116,4 +116,26 @@
     </nav>
     <!--end component top menu-->
   </div>
+  <!--start component breadcrumbs-->
+  {% if breadCrumbs%}
+  <div class="breadcrumbs">
+    <ul>
+      {% for item in breadCrumbs %}
+      <li>
+        {% if loop.last %}
+        <span>{{ item.name }}</span> {%else%}
+        <a href="" title="{{ item.name }}">{{ item.name }}</a> {%endif%}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {%endif%}
+  <!--end component breadcrumbs-->
+  
+  <!--start component sectionName-->
+  {% if sectionName %}
+    <h1 class="section-name">{{sectionName}}</h1>
+  {% endif %}
+  <!--end component sectionName-->
+  
 </div>

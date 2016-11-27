@@ -127,9 +127,11 @@
     clear: both;
     font-size: 0.8em;
     .city-block {
-      display: inline-block;
-      &:first-child{
-        margin-right: 5px;
+      width: 46%;
+      margin-right: 4%;
+      float: left;
+      &:last-child{
+        margin-right: 0;
       }
     }
   }
@@ -148,7 +150,7 @@
   }
   @include breakpoint(max-width 760px) {
     margin-top: 40px;
-    .mobily-city-list{
+    .mobily-city-list {
       display: block;
     }
     .city-list {

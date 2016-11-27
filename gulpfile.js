@@ -34,8 +34,8 @@ var libs = {
   // bourbon: libsPath.bourbon
   // bootstrap: libsPath.bootstrap, // inject name bootstrap
   slick: libsPath.slick, // inject name slick
-  formValidator: libsPath.formValidator
-  //select:libsPath.select,
+  formValidator: libsPath.formValidator,
+  select:libsPath.select,
   //fancybox:libsPath.fancybox,
   //cropper:libsPath.cropper,
   //fullpage:libsPath.fullpage, // inject name fullpage
