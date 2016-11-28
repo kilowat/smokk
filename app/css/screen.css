@@ -862,6 +862,17 @@ footer .bottom-line .dev {
 
 .feedback-page .feedback-form .row .buttons .buttons-row {
   margin-bottom: 1em;
+  position: relative;
+}
+
+.feedback-page .feedback-form .row .buttons .buttons-row .file-del-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.feedback-page .feedback-form .row .add-field {
+  width: 200px;
 }
 
 .feedback-page .feedback-form .address-info {
@@ -885,6 +896,40 @@ footer .bottom-line .dev {
 .feedback-page .feedback-form .address-info > .cell:nth-child(2) {
   float: left;
   width: 43%;
+}
+
+.feedback-page .feedback-form .file_upload {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+}
+
+.feedback-page .feedback-form .file_upload span,
+.feedback-page .feedback-form .file_upload mark {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.feedback-page .feedback-form .file_upload span {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 8em;
+  height: 100%;
+}
+
+.feedback-page .feedback-form .file_upload mark {
+  background: transparent;
+  padding-left: 1em;
+}
+
+.feedback-page .feedback-form .file_upload input[type=file] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 
 .feedback-page .bottom-row {
@@ -2837,6 +2882,15 @@ ul.bxslider {
 .base-btn.green:hover {
   background-color: #1a923f;
   color: #fff;
+}
+
+.base-btn.grey {
+  color: #ccc;
+}
+
+.base-btn.grey:hover {
+  background-color: transparent;
+  color: #aaa;
 }
 
 .selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {

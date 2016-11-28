@@ -173,7 +173,7 @@
 
     <div class="wrapper">
       <div class="feedback-page">
-        <form action="" method="post">
+        <form action="" method="POST" target="uploadresult" name="upfiles" enctype="multipart/form-data">
           <div class="feedback-form">
             <div class="row">
               <span class="head">Выберете получателя обращения:</span>
@@ -264,13 +264,18 @@
             </div>
             <div class="row">
               <span class="head">Вы можете добавить несколько вложений к обращению:</span>
-              <div class="buttons">
+              <div class="buttons" id="filewrapper">
                 <div class="buttons-row">
-                  <button>Выберите файл</button>
+                  <label class="file_upload" for="load_file">
+                <span>Выбрать</span>
+                <mark>Файл не выбран</mark>
+                <input name="file[]" type="file" id="load_file" size="30" />
+              </label>
+                  <button type="button" class="file-del-btn" onclick="uploader.delfield(this)">DEL</button>
                 </div>
-                <div class="buttons-row">
-                  <button>Добавить еще файл</button>
-                </div>
+              </div>
+              <div class="buttons-row add-button-row">
+                <button type="button" onclick="uploader.addfield(window)" class="base-btn grey add-field">Добавить еще файл</button>
               </div>
             </div>
             <div class="row">
@@ -304,6 +309,9 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="row">
+                <iframe name="uploadresult" frameborder="0" id="uploadresult" width="600" height="400"></iframe>
               </div>
             </div>
           </div>
@@ -467,6 +475,8 @@
   <script src="./js/main.js"></script>
 
   <script src="./js/map-path.js"></script>
+
+  <script src="./js/upload-files.js"></script>
 
   <!--endinject-->
   <!--

@@ -15,4 +15,11 @@
       color: #fff;
     }
   }
+    &.grey {
+    color: #ccc;
+    &:hover {
+      background-color: transparent;
+      color: #aaa;
+    }
+  }
 }

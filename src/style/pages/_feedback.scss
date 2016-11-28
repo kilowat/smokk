@@ -40,7 +40,16 @@
       .buttons {
         .buttons-row {
           margin-bottom: 1em;
+          position: relative;
+          .file-del-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
         }
+      }
+      .add-field {
+        width: 200px;
       }
     }
     .address-info {
@@ -54,6 +63,34 @@
         float: left;
         width: 43%
       }
+    }
+    .file_upload {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      font-size: 1em;
+      height: 2em;
+      line-height: 2em
+    }
+    .file_upload span,
+    .file_upload mark {
+      display: inline-block;
+      cursor: pointer
+    }
+    .file_upload span {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 8em;
+      height: 100%;
+    }
+    .file_upload mark {
+      background: transparent;
+      padding-left: 1em
+    }
+    .file_upload input[type=file] {
+      position: absolute;
+      top: 0;
+      opacity: 0
     }
   }
   .bottom-row {
