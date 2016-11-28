@@ -1,4 +1,5 @@
 .feedback-page {
+  $smallSize: 750px;
   .feedback-form {
     .head {
       font-weight: 600;
@@ -31,10 +32,20 @@
           float: left;
           width: 58%;
           margin-right: 2%;
+          @include breakpoint(max-width $smallSize) {
+            width: 100%;
+            left: auto;
+            margin-bottom: 10px;
+          }
         }
         >.cell:nth-child(2) {
           float: left;
           width: 40%;
+          @include breakpoint(max-width $smallSize) {
+            width: 100%;
+            left: auto;
+            margin-bottom: 10px;
+          }
         }
       }
       .buttons {
@@ -61,27 +72,52 @@
       }
       >.cell:nth-child(2) {
         float: left;
-        width: 43%
+        width: 43%;
       }
     }
     .file_upload {
-      display: block;
-      position: relative;
-      overflow: hidden;
+      display: inline-block;
       font-size: 1em;
-      height: 2em;
-      line-height: 2em
+      height: 2.8em;
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        span {
+          color: #aaa;
+        }
+      }
+    }
+    .file-del-btn {
+      background-color: #fff;
+      border: 1px solid;
+      color: red;
+      cursor: pointer;
+      font-family: "Open Sans";
+      font-size: 1.1em;
+      height: 46px;
+      line-height: 2em;
+      width: 200px;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     .file_upload span,
     .file_upload mark {
       display: inline-block;
-      cursor: pointer
     }
     .file_upload span {
       box-sizing: border-box;
       -moz-box-sizing: border-box;
       width: 8em;
       height: 100%;
+      background-color: #fff;
+      border: 1px solid;
+      color: #ccc;
+      cursor: pointer;
+      font-family: "Open Sans";
+      font-size: 1.1em;
+      line-height: 2.3em;
+      padding-left: 1em;
     }
     .file_upload mark {
       background: transparent;
@@ -94,7 +130,6 @@
     }
   }
   .bottom-row {
-    $smallSize: 750px;
     margin-top: 15px;
     @include container;
     .cell {
@@ -103,6 +138,11 @@
       padding-left: 0.54348%;
       padding-right: 0.54348%;
       width: 50%;
+      @include breakpoint(max-width $smallSize) {
+        width: 100%;
+        left: auto;
+        margin-bottom: 10px;
+      }
     }
     .table {
       width: 100%;
@@ -153,6 +193,7 @@
         }
         .send {
           height: 43px;
+          max-width: 200px;
           i {
             margin-left: 15px;
             position: relative;

@@ -164,6 +164,10 @@ i {
   margin-bottom: 1em;
 }
 
+.red {
+  color: red;
+}
+
 html {
   font-family: "Open Sans";
   font-size: 15px;
@@ -855,9 +859,25 @@ footer .bottom-line .dev {
   margin-right: 2%;
 }
 
+@media (max-width: 750px) {
+  .feedback-page .feedback-form .row .person-info > .cell:first-child {
+    width: 100%;
+    left: auto;
+    margin-bottom: 10px;
+  }
+}
+
 .feedback-page .feedback-form .row .person-info > .cell:nth-child(2) {
   float: left;
   width: 40%;
+}
+
+@media (max-width: 750px) {
+  .feedback-page .feedback-form .row .person-info > .cell:nth-child(2) {
+    width: 100%;
+    left: auto;
+    margin-bottom: 10px;
+  }
 }
 
 .feedback-page .feedback-form .row .buttons .buttons-row {
@@ -899,18 +919,35 @@ footer .bottom-line .dev {
 }
 
 .feedback-page .feedback-form .file_upload {
-  display: block;
-  position: relative;
-  overflow: hidden;
+  display: inline-block;
   font-size: 1em;
-  height: 2em;
+  height: 2.8em;
+  overflow: hidden;
+  position: relative;
+}
+
+.feedback-page .feedback-form .file_upload:hover span {
+  color: #aaa;
+}
+
+.feedback-page .feedback-form .file-del-btn {
+  background-color: #fff;
+  border: 1px solid;
+  color: red;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  height: 46px;
   line-height: 2em;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .feedback-page .feedback-form .file_upload span,
 .feedback-page .feedback-form .file_upload mark {
   display: inline-block;
-  cursor: pointer;
 }
 
 .feedback-page .feedback-form .file_upload span {
@@ -919,6 +956,14 @@ footer .bottom-line .dev {
   -moz-box-sizing: border-box;
   width: 8em;
   height: 100%;
+  background-color: #fff;
+  border: 1px solid;
+  color: #ccc;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  line-height: 2.3em;
+  padding-left: 1em;
 }
 
 .feedback-page .feedback-form .file_upload mark {
@@ -952,6 +997,14 @@ footer .bottom-line .dev {
   padding-left: 0.54348%;
   padding-right: 0.54348%;
   width: 50%;
+}
+
+@media (max-width: 750px) {
+  .feedback-page .bottom-row .cell {
+    width: 100%;
+    left: auto;
+    margin-bottom: 10px;
+  }
 }
 
 .feedback-page .bottom-row .table {
@@ -1024,6 +1077,7 @@ footer .bottom-line .dev {
 
 .feedback-page .bottom-row .table .input-block .send {
   height: 43px;
+  max-width: 200px;
 }
 
 .feedback-page .bottom-row .table .input-block .send i {
@@ -2891,6 +2945,10 @@ ul.bxslider {
 .base-btn.grey:hover {
   background-color: transparent;
   color: #aaa;
+}
+
+.base-btn.red.grey {
+  color: red;
 }
 
 .selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {

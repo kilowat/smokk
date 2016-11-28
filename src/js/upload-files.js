@@ -18,7 +18,7 @@
       htmlButtonText = DOC.createTextNode("DEL"),
       htmlButtonSelectText = DOC.createTextNode("Выбрать"),
       htmlButtonSelect = DOC.createElement("span");
-    
+
     htmlButtonSelect.append(htmlButtonSelectText);
     htmlMark.append(htmlMarkText);
     htmlLabel.setAttribute("for", "load_file");
@@ -43,3 +43,21 @@
     htmlP.appendChild(htmlButton);
     htmlButton.appendChild(htmlButtonText);
   }
+  $('input[type=file]').change(function () {
+    var fileType = ['image/jpeg', 'image/jpg', 'image/png', 'image/bmp'];
+    var file = $(this)[0].files[0];
+    
+    for (var i = 0; fileType.length > i; i++) {
+      if (fileType[i] === file.type) {
+        $(this).prev().text(file.name).removeClass('red');
+        break;
+      } else {
+        fileTypeError($(this));
+      }
+    }
+    
+    function fileTypeError(obj) {
+      obj.prev().addClass('red').text(obj[0].files[0].name+' неверный формат файла');
+    }
+
+  });
