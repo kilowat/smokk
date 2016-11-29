@@ -206,13 +206,15 @@ $(function () {
     for (var country in paths) {
       var obj = r.path(paths[country].path);
       var self;
+     
       obj.attr(attributes);
       arr[obj.id] = country;
       obj
         .hover(function () {
           clearTimeout(tHandler);
+        
           var point = this.getBBox(0);
-
+         
           self = this;
 
           $('#' + arr[this.id]).addClass('selected');
@@ -234,8 +236,8 @@ $(function () {
           }
 
           $('.point').hover(function () {
-            console.log('point hover');
             clearTimeout(tHandler);
+            
             $('#' + arr[self.id]).addClass('selected');
             self.animate({
               fill: '#1669AD',
