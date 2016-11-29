@@ -1,0 +1,20 @@
+.magazine-release{
+  h2{
+    text-align: center;
+  }
+  .descr{
+    text-align: center;
+    line-height: 1.6em;
+    font-weight: 200;
+  }
+  .list{
+    @include container;
+    .cell{
+      height: 220px;
+      @include span(1 of 3 inside 0);
+      .img{
+
+      }
+    }
+  }
+}

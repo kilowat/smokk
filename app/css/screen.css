@@ -174,11 +174,11 @@ html {
 }
 
 h2 {
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 600;
   font-family: "Rubik";
   margin-bottom: 1.6em;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
 @media (max-width: 640px) {
@@ -839,6 +839,7 @@ footer .bottom-line .dev {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-top: 1em;
 }
 
 .feedback-page .feedback-form .row .person-info {
@@ -1088,9 +1089,67 @@ footer .bottom-line .dev {
 
 .feedback-page .bottom-row .table .input-block .send:hover i {
   background-image: url(../images/sprite.png);
-  background-position: -145px -109px;
+  background-position: -116px -93px;
   width: 14px;
   height: 17px;
+}
+
+.magazine-page .magazine-descr {
+  border: 4px solid #ccc;
+  padding: 10px;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.magazine-page .magazine-descr .cell-pic {
+  float: left;
+  width: 28%;
+  margin-right: 2%;
+  text-align: center;
+  height: 200px;
+}
+
+.magazine-page .magazine-descr .cell-pic .image {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  top: -50px;
+}
+
+.magazine-page .magazine-descr .cell-pic .image img {
+  background-color: #ccc;
+  max-width: 200px;
+  display: block;
+}
+
+.magazine-page .magazine-descr .cell-pic .image .about-person {
+  background-color: #ccc;
+  padding-top: 10px;
+}
+
+.magazine-page .magazine-descr .cell-pic .image .about-person .name {
+  padding: 10px;
+}
+
+.magazine-page .magazine-descr .text {
+  float: left;
+  width: 70%;
+}
+
+.magazine-page .magazine-descr .text h3 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.magazine-page .magazine-descr .text p {
+  line-height: 1.5em;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .search {
@@ -1589,6 +1648,18 @@ ul.bxslider {
   padding: 15px;
   background-color: #00923f;
   display: inline-block;
+}
+
+#slider .btn-news-detail:hover {
+  background-color: #fff;
+  color: #00923f;
+}
+
+#slider .btn-news-detail:hover .ic_triangle {
+  background-image: url(../images/sprite.png);
+  background-position: -116px -93px;
+  width: 14px;
+  height: 17px;
 }
 
 #slider .btn-news-detail i {
@@ -2471,6 +2542,39 @@ ul.bxslider {
   -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   opacity: 1;
+}
+
+.magazine-release h2 {
+  text-align: center;
+}
+
+.magazine-release .descr {
+  text-align: center;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+
+.magazine-release .list {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.magazine-release .list:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.magazine-release .list .cell {
+  height: 220px;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
 }
 
 #drop-down-menu {

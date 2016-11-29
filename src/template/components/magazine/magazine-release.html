@@ -1,0 +1,22 @@
+<div class="magazine-release">
+  <h2>Выпуски журнала</h2>
+  <div class="descr">
+    <div>Перед Вами 12 последних выпусков журанала "Местное самоуправление Кубани"</div>
+    <div>Если Вам нужны более ранние выпуски, воспользутесь поиском выпуска по дате</div>
+  </div>
+  <div class="list">
+    <!--foreach $arResult-->
+    {% for item in magazins %}
+    <div class="cell">
+      <div class="date-name">{{ item.name }}</div>
+      <div class="img">
+        <a href="" title=""><img src="{{ item.img }}" alt=""></a>
+      </div>
+      <div class="text">
+        {{item.text}}
+      </div>
+    </div>
+    {% endfor %}
+    <!--endforeach-->
+  </div>
+</div>

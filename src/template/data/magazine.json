@@ -1,0 +1,54 @@
+{
+  "title": "Журнал местное самоуправление Кубани",
+  "sectionName": "Журнал местное самоуправление Кубани",
+  "breadCrumbs": [
+    {
+      "name": "Главная"
+    },
+    {
+      "name": "Журнал местное самоуправление Кубани"
+    }
+  ],
+  "magazins": [
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    }
+  ]
+}

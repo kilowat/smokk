@@ -283,6 +283,13 @@ ul.bxslider {
     padding: 15px;
     background-color: #00923f;
     display: inline-block;
+    &:hover {
+      background-color: #fff;
+      color: #00923f;
+      .ic_triangle {
+        @include sprite($ic_triangle-2);
+      }
+    }
     i {
       margin-left: 10px;
       position: relative;
@@ -343,10 +350,10 @@ ul.bxslider {
 }
 
 @include breakpoint(max-width 702px) {
-  #slider .slide-item{
+  #slider .slide-item {
     height: 350px;
   }
-  #slider .slider-content{
+  #slider .slider-content {
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 20px;

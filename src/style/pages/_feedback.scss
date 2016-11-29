@@ -25,6 +25,7 @@
         height: 200px;
         width: 100%;
         box-sizing: border-box;
+        padding-top: 1em;
       }
       .person-info {
         @include container;
@@ -201,7 +202,7 @@
           }
           &:hover {
             i {
-              @include sprite($ic_triangle-2-hover);
+              @include sprite($ic_triangle-2);
             }
           }
         }

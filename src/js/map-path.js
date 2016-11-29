@@ -3,9 +3,9 @@ $(function () {
   var imagePath = "./images/";
   var timerRemove;
 
-  if($('#map').length === 0)
+  if ($('#map').length === 0)
     return;
-  
+
   if (window.innerWidth <= 750) {
     $('#map').replaceWith('<img src="./images/static-map.png">');
     return;
@@ -197,57 +197,76 @@ $(function () {
     },
     arr = new Array();
   var offsetLeft = 5;
-  var offsetTop = -15;
+  var offsetTop = 0;
+  var tHandler;
 
   setMapHandler();
 
   function setMapHandler() {
     for (var country in paths) {
       var obj = r.path(paths[country].path);
+      var self;
       obj.attr(attributes);
       arr[obj.id] = country;
       obj
         .hover(function () {
-          clearTimeout(timerRemove);
+          clearTimeout(tHandler);
+          var point = this.getBBox(0);
+
+          self = this;
+
           $('#' + arr[this.id]).addClass('selected');
           this.animate({
             fill: '#1669AD',
             'stroke-width': 3,
           }, 100);
+
+          if (arr[this.id] !== $('.point').data('id')) {
+            $('#map').next('.point').remove();
+            $('#map').after($('<div data-id="' + arr[this.id] + '" />').addClass('point'));
+            $('.point')
+              .prepend($('<img />').attr('src', imagePath + arr[this.id] + '.png'))
+              .css({
+                left: point.x + offsetLeft,
+                top: point.y + offsetTop
+              })
+              .fadeIn(100);
+          }
+
+          $('.point').hover(function () {
+            console.log('point hover');
+            clearTimeout(tHandler);
+            $('#' + arr[self.id]).addClass('selected');
+            self.animate({
+              fill: '#1669AD',
+              'stroke-width': 3,
+            }, 100);
+          }, function () {
+            self.animate({
+              fill: attributes.fill,
+              'stroke-width': attributes["stroke-width"]
+            });
+          });
         }, function () {
           this.animate({
             fill: attributes.fill,
             'stroke-width': attributes["stroke-width"]
           }, 100);
-          $('#' + arr[this.id]).removeClass('selected');
-        })
-        .hover(function (e) {
-          var point = this.getBBox(0);
-
-          $('#map').next('.point').remove();
-          $('#map').after($('<div />').addClass('point'));
-          $('.point')
-            .prepend($('<img />').attr('src', imagePath + arr[this.id] + '.png'))
-            .css({
-              left: point.x + offsetLeft,
-              top: point.y + offsetTop
-            })
-            .fadeIn(100);
-        })
-        .mouseout(function () {
-          timerRemove = setTimeout(function () {
-            $('.point').fadeOut(100, function () {
-              //
-            });
-          }, 10);
-        })
+          $('#' + arr[self.id]).removeClass('selected');
+          if (arr[self.id] !== $(this).data('id')) {
+            tHandler = setTimeout(function () {
+              $('.point').fadeOut(100, function () {
+                $('#map').next('.point').remove();
+              });
+            }, 100);
+          }
+        });
     }
   }
-
   //when a links is hovered in ul list;
   (function () {
     var ob;
-    
+
     $('.city-list a').hover(function () {
       ob = r.path(paths[$(this).attr('id')].path);
       ob.attr(attributes);

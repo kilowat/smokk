@@ -1,0 +1,52 @@
+.magazine-page {
+  $block-height: 200px;
+  .magazine-descr {
+    border: 4px solid #ccc;
+    padding: 10px;
+    height: $block-height;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .cell-pic {
+      float: left;
+      width: 28%;
+      margin-right: 2%;
+      text-align: center;
+      height: $block-height;
+      .image {
+        display: inline-block;
+        padding: 10px;
+        background-color: #fff;
+        position: relative;
+        top:-50px;
+        img {
+          background-color: #ccc;
+          max-width: 200px;
+          display: block;
+        }
+        .about-person {
+          background-color: #ccc;
+          padding-top: 10px;
+          .name {
+            padding: 10px;
+          }
+        }
+      }
+    }
+    .text {
+      float: left;
+      width: 70%;
+      h3{
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+      }
+      p{
+        line-height: 1.5em;
+        font-style: italic;
+        font-weight: 200;
+      }
+    }
+  }  
+}
