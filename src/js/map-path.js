@@ -225,7 +225,7 @@ $(function () {
 
           if (arr[this.id] !== $('.point').data('id')) {
             $('#map').next('.point').remove();
-            $('#map').after($('<div data-id="' + arr[this.id] + '" />').addClass('point'));
+            $('#map').after($('<div data-id="' + arr[this.id] + '" />').addClass('point ' + arr[this.id]));
             $('.point')
               .prepend($('<img />').attr('src', imagePath + arr[this.id] + '.png'))
               .css({
@@ -286,7 +286,7 @@ $(function () {
       var point = ob.getBBox(0);
 
       $('#map').next('.point').remove();
-      $('#map').after($('<div />').addClass('point'));
+       $('#map').after($('<div data-id="' + $(this).attr('id') + '" />').addClass('point ' + $(this).attr('id')));
       $('.point')
         .prepend($('<img />').attr('src', imagePath + $(this).attr('id') + '.png'))
         .css({

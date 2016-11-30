@@ -1919,6 +1919,10 @@ ul.bxslider {
   height: auto;
 }
 
+.city-map .point.Krasnodar img {
+  width: 70px;
+}
+
 .city-map .city-list {
   float: left;
   width: 47%;

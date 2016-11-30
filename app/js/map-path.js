@@ -206,13 +206,15 @@ $(function () {
     for (var country in paths) {
       var obj = r.path(paths[country].path);
       var self;
+     
       obj.attr(attributes);
       arr[obj.id] = country;
       obj
         .hover(function () {
           clearTimeout(tHandler);
+        
           var point = this.getBBox(0);
-
+         
           self = this;
 
           $('#' + arr[this.id]).addClass('selected');
@@ -223,7 +225,7 @@ $(function () {
 
           if (arr[this.id] !== $('.point').data('id')) {
             $('#map').next('.point').remove();
-            $('#map').after($('<div data-id="' + arr[this.id] + '" />').addClass('point'));
+            $('#map').after($('<div data-id="' + arr[this.id] + '" />').addClass('point ' + arr[this.id]));
             $('.point')
               .prepend($('<img />').attr('src', imagePath + arr[this.id] + '.png'))
               .css({
@@ -234,8 +236,8 @@ $(function () {
           }
 
           $('.point').hover(function () {
-            console.log('point hover');
             clearTimeout(tHandler);
+            
             $('#' + arr[self.id]).addClass('selected');
             self.animate({
               fill: '#1669AD',
@@ -284,7 +286,7 @@ $(function () {
       var point = ob.getBBox(0);
 
       $('#map').next('.point').remove();
-      $('#map').after($('<div />').addClass('point'));
+       $('#map').after($('<div data-id="' + $(this).attr('id') + '" />').addClass('point ' + $(this).attr('id')));
       $('.point')
         .prepend($('<img />').attr('src', imagePath + $(this).attr('id') + '.png'))
         .css({
