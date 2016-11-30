@@ -1,0 +1,35 @@
+.magazine-subscribe{
+  h2{
+    text-align: center;
+  }
+  .descr{
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .subscribe-form{
+    input{
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+    }
+    .block{
+      .row{
+        @include container;
+        margin-bottom: 1em;
+        .cell{
+          @include span(4 of 12 inside);
+        }
+        &:nth-child(3){
+          .cell{
+            &:first-child{
+              @include span(4 of 12 inside);
+            }
+            &:nth-child(2){
+              @include span(8 at 5 of 12 inside);
+            }
+          }
+        }
+      }
+    }
+  }
+}

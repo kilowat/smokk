@@ -1,19 +1,57 @@
-.magazine-release{
-  h2{
+.magazine-release {
+  h2 {
     text-align: center;
   }
-  .descr{
+  .descr {
     text-align: center;
     line-height: 1.6em;
     font-weight: 200;
+    margin-bottom: 2em;
   }
-  .list{
+  .list {
     @include container;
-    .cell{
-      height: 220px;
+    .cell {
+      margin-bottom: 8%;
       @include span(1 of 3 inside 0);
-      .img{
-
+      .date-name {
+        font-weight: 600;
+        margin-bottom: 1em;
+      }
+      .item {
+        height: 260px;
+        overflow: hidden;
+        @include container;
+        .img {
+          float: left;
+          width: 50%;
+        }
+        .text {
+          float: left;
+          width: 40%;
+          font-weight: 200;
+          margin-left: 5%;
+          padding-right: 5%;
+        }
+      }
+    }
+  }
+  .magazine-search{
+    text-align: center;
+    margin-bottom: 2em;
+    .cell{
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      margin-left: 1%;
+      margin-right: 1%;
+      &:first-child{
+        text-align: right;
+      }
+      label{
+        font-weight: 600;
+      }
+      .selectize-control{
+        text-align: left;
       }
     }
   }

@@ -8,15 +8,37 @@
     <!--foreach $arResult-->
     {% for item in magazins %}
     <div class="cell">
-      <div class="date-name">{{ item.name }}</div>
-      <div class="img">
-        <a href="" title=""><img src="{{ item.img }}" alt=""></a>
-      </div>
-      <div class="text">
-        {{item.text}}
+      <div class="item">
+        <div class="date-name">{{ item.dateName }}</div>
+
+        <div class="img">
+          <a href="" title=""><img src="{{ item.img }}" alt=""></a>
+        </div>
+        <div class="text">
+          {{item.text}}
+        </div>
       </div>
     </div>
     {% endfor %}
     <!--endforeach-->
   </div>
+
+  <div class="magazine-search">
+    <div class="cell">
+      <label for="select_year">Поиск выпуска журнала</label>
+    </div>
+    <div class="cell">
+      <select name="year" id="select_year">
+        <option value="default" selected="selected">Выбрать год</option>
+        <option value="2016">2016</option>
+      </select>
+    </div>
+    <div class="cell">
+      <select name="month" id="select_month">
+        <option value="default" selected="selected">Выбрать месяц</option>
+        <option value="june">Июль</option>
+      </select>
+    </div>
+  </div>
+
 </div>

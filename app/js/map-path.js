@@ -199,20 +199,52 @@ $(function () {
   var offsetLeft = 5;
   var offsetTop = 0;
   var tHandler;
+  var leaveMap;
+  var idLiMap;
+  var firstInMap;
+  var lostInMap;
 
   setMapHandler();
 
+  function hideArms(placeMap1, placeMap2){
+    $('#map').next('.point').hover(function(){},function(){
+      if (placeMap1 !== $("#map").next("div").attr("class")) {
+        tHandler = setTimeout(function () {
+          $('.point').fadeOut(100, function () {
+            $('#map').next('.point').remove();
+            $('#' + placeMap2).removeClass('selected');
+          })
+        })
+      }
+    });
+  }
+
+  
   function setMapHandler() {
     for (var country in paths) {
       var obj = r.path(paths[country].path);
       var self;
-     
+      
       obj.attr(attributes);
       arr[obj.id] = country;
       obj
         .hover(function () {
-          clearTimeout(tHandler);
+          lostInMap = arr[this.id];
+          firstInMap = $("#map").next("div").attr("class");
+          if(idLiMap != undefined){
+            $('#' + arr[idLiMap]).removeClass('selected');
+          }
+          
+          
+          if(leaveMap != undefined){
+            leaveMap.animate({
+              fill: attributes.fill,//make withe
+              'stroke-width': attributes["stroke-width"]
+            }, 100);
+          }
         
+          clearTimeout(tHandler);
+          
           var point = this.getBBox(0);
          
           self = this;
@@ -250,15 +282,20 @@ $(function () {
             });
           });
         }, function () {
+          leaveMap = this;
+          hideArms(firstInMap, lostInMap);
           this.animate({
-            fill: attributes.fill,
+            fill: attributes.fill,//make withe
             'stroke-width': attributes["stroke-width"]
           }, 100);
+          idLiMap = self.id;
           $('#' + arr[self.id]).removeClass('selected');
           if (arr[self.id] !== $(this).data('id')) {
             tHandler = setTimeout(function () {
+              //hide arms
               $('.point').fadeOut(100, function () {
-                $('#map').next('.point').remove();
+              $('#map').next('.point').remove();
+              //end hide arms
               });
             }, 100);
           }
