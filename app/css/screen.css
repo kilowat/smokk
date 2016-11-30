@@ -2704,6 +2704,122 @@ ul.bxslider {
   padding-right: 0.83333%;
 }
 
+.magazine-subscribe .subscribe-form .bottom-row {
+  margin-top: 15px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .cell-bottom {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding-left: 0.54348%;
+  padding-right: 0.54348%;
+  width: 50%;
+}
+
+@media (max-width: 750px) {
+  .magazine-subscribe .subscribe-form .bottom-row .cell-bottom {
+    width: 100%;
+    left: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table {
+  width: 100%;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@media (max-width: 750px) {
+  .magazine-subscribe .subscribe-form .bottom-row .table .input-block {
+    display: block;
+    text-align: center;
+  }
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .capcha-label {
+  font-style: italic;
+  color: #b9b9b9;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .capcha-img {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 750px) {
+  .magazine-subscribe .subscribe-form .bottom-row .table .input-block .capcha-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .capcha-input {
+  max-width: 200px;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .clear-form,
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .close-form {
+  border-bottom: 1px dashed;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  font-size: 1em;
+  cursor: pointer;
+  line-height: 1.2em;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .clear-form:hover,
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .close-form:hover {
+  color: #007cc2;
+}
+
+@media (max-width: 750px) {
+  .magazine-subscribe .subscribe-form .bottom-row .table .input-block .clear-form,
+  .magazine-subscribe .subscribe-form .bottom-row .table .input-block .close-form {
+    display: none;
+  }
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .clear-form {
+  width: 124px;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .send {
+  height: 43px;
+  max-width: 200px;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .send i {
+  margin-left: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.magazine-subscribe .subscribe-form .bottom-row .table .input-block .send:hover i {
+  background-image: url(../images/sprite.png);
+  background-position: -116px -93px;
+  width: 14px;
+  height: 17px;
+}
+
 #drop-down-menu {
   position: fixed;
   z-index: 5;

@@ -214,7 +214,7 @@ $(function () {
             $('#map').next('.point').remove();
             $('#' + placeMap2).removeClass('selected');
           })
-        })
+        },100)
       }
     });
   }
