@@ -203,18 +203,34 @@ $(function () {
   var idLiMap;
   var firstInMap;
   var lostInMap;
+  var self;
 
   setMapHandler();
-
+  
+  function hideArea(placeMap1, placeMap2, obj){
+    if(obj != window & obj != undefined){
+      obj.animate({
+        fill: attributes.fill,//make withe
+        'stroke-width': attributes["stroke-width"]
+      }, 100);
+    }
+  }
+  
   function hideArms(placeMap1, placeMap2){
+
     $('#map').next('.point').hover(function(){},function(){
+      
       if (placeMap1 !== $("#map").next("div").attr("class")) {
+        hideArea(firstInMap, lostInMap, self);
         tHandler = setTimeout(function () {
           $('.point').fadeOut(100, function () {
             $('#map').next('.point').remove();
             $('#' + placeMap2).removeClass('selected');
           })
-        },100)
+        },100);
+        
+
+        
       }
     });
   }
@@ -223,12 +239,13 @@ $(function () {
   function setMapHandler() {
     for (var country in paths) {
       var obj = r.path(paths[country].path);
-      var self;
+      
       
       obj.attr(attributes);
       arr[obj.id] = country;
       obj
         .hover(function () {
+          
           lostInMap = arr[this.id];
           firstInMap = $("#map").next("div").attr("class");
           if(idLiMap != undefined){
@@ -282,6 +299,7 @@ $(function () {
             });
           });
         }, function () {
+
           leaveMap = this;
           hideArms(firstInMap, lostInMap);
           this.animate({
