@@ -28,3 +28,100 @@
     }
   }
 }
+
+
+/* Sweep To Left */
+.hvr-sweep-to-left-white {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-left-white:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1a923f;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left-white:hover,
+.hvr-sweep-to-left-white:focus,
+.hvr-sweep-to-left-white:active {
+  color: #1a923f;
+  border: 1px solid #1a923f;
+}
+
+.hvr-sweep-to-left-white:hover:before,
+.hvr-sweep-to-left-white:focus:before,
+.hvr-sweep-to-left-white:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/* Sweep To Left */
+.hvr-sweep-to-left-green {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-left-green:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left-green:hover,
+.hvr-sweep-to-left-green:focus,
+.hvr-sweep-to-left-green:active {
+  color: #1a923f;
+}
+
+.hvr-sweep-to-left-green:hover:before,
+.hvr-sweep-to-left-green:focus:before,
+.hvr-sweep-to-left-green:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}

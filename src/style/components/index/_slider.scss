@@ -284,8 +284,7 @@ ul.bxslider {
     background-color: #00923f;
     display: inline-block;
     &:hover {
-      background-color: #fff;
-      color: #00923f;
+      color: #1a923f;
       .ic_triangle {
         @include sprite($ic_triangle-2);
       }

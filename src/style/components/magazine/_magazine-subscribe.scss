@@ -18,14 +18,29 @@
         margin-bottom: 1em;
         .cell {
           @include span(4 of 12 inside);
+          @include breakpoint(max-width $small) {
+            @include span(1 of 1);
+            float: none;
+            margin-bottom: 1em;
+          }
         }
         &:nth-child(3) {
           .cell {
             &:first-child {
               @include span(4 of 12 inside);
+              @include breakpoint(max-width $small) {
+                @include span(1 of 1);
+                float: none;
+                margin-bottom: 1em;
+              }
             }
             &:nth-child(2) {
               @include span(8 at 5 of 12 inside);
+              @include breakpoint(max-width $small) {
+                @include span(1 of 1);
+                float: none;
+                margin-bottom: 1em;
+              }
             }
           }
         }

@@ -1,0 +1,31 @@
+.links-list {
+  @include container;
+  .item {
+    @include span(1 of 3 inside 1/9);
+    @include breakpoint(max-width 850px) {
+      @include span(1 of 1);
+      text-align: center;
+    }
+    margin-bottom: 2em;
+    .img {
+      float: left;
+      width: 30%;
+      @include breakpoint(max-width 850px) {
+        width: 100%;
+        float: none;
+      }
+    }
+    .text {
+      float: left;
+      width: 70%;
+      @include breakpoint(max-width 850px) {
+        width: 100%;
+        float: none;
+      }
+      .name {
+        margin-bottom: 1em;
+        line-height: 1.3em;
+      }
+    }
+  }
+}

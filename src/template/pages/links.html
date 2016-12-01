@@ -1,0 +1,21 @@
+{% extends './../layouts/master.html' %} {% block content %}
+<div class="wrapper">
+ <!--start component links list-->
+ <div class="links-list">
+   <!--foreach $arResult-->
+   {% for item in links %}
+   <div class="item">
+     <div class="img">
+       <img src="{{ item.img }}" alt="">
+     </div>
+     <div class="text">
+       <div class="name">{{ item.name }}</div>
+       <div class="link"><a href="" title="{{ item.name }}">{{ item.link }}</a></div>
+     </div>
+   </div>
+   {% endfor %}
+   <!--endforeach--> 
+ </div>
+ <!--end component links list-->
+</div>
+{% endblock %}

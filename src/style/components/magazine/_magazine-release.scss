@@ -13,17 +13,31 @@
     .cell {
       margin-bottom: 8%;
       @include span(1 of 3 inside 0);
+      @include breakpoint(max-width $medium) {
+        @include span(1 of 1 inside 0);
+        float: none;
+        text-align: center;
+      }
       .date-name {
         font-weight: 600;
         margin-bottom: 1em;
       }
       .item {
-        height: 260px;
+        height: 256px;
         overflow: hidden;
         @include container;
+        @include breakpoint(max-width $medium) {
+          overflow: unset;
+          height: auto;
+        }
         .img {
           float: left;
           width: 50%;
+          @include breakpoint(max-width $medium) {
+            float: none;
+            width: 100%;
+            margin-bottom: 1em;
+          }
         }
         .text {
           float: left;
@@ -31,26 +45,39 @@
           font-weight: 200;
           margin-left: 5%;
           padding-right: 5%;
+          @include breakpoint(max-width $medium) {
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            padding-right: 0;
+          }
         }
       }
     }
   }
-  .magazine-search{
+  .magazine-search {
     text-align: center;
     margin-bottom: 2em;
-    .cell{
+    .cell {
       display: inline-block;
       vertical-align: middle;
       width: 30%;
       margin-left: 1%;
       margin-right: 1%;
-      &:first-child{
-        text-align: right;
+      @include breakpoint(max-width $small) {
+        width: 100%;
+        margin-bottom: 1em;
       }
-      label{
+      &:first-child {
+        text-align: right;
+        @include breakpoint(max-width $small) {
+         text-align: center;
+        }
+      }
+      label {
         font-weight: 600;
       }
-      .selectize-control{
+      .selectize-control {
         text-align: left;
       }
     }

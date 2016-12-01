@@ -73,7 +73,7 @@
         <!--end include contact address-->
       </div>
       <div class="feedback-block">
-        <button class="feedback-btn show-feedback-box">Написать нам <i class="ic_note"></i></button>
+        <button class="feedback-btn show-feedback-box hvr-sweep-to-left-white">Написать нам <i class="ic_note"></i></button>
       </div>
     </div>
   </div>
@@ -116,6 +116,8 @@
     </nav>
     <!--end component top menu-->
   </div>
+</div>
+<div class="wrapper">
   <!--start component breadcrumbs-->
   {% if breadCrumbs%}
   <div class="breadcrumbs">
@@ -131,11 +133,9 @@
   </div>
   {%endif%}
   <!--end component breadcrumbs-->
-  
+
   <!--start component sectionName-->
   {% if sectionName %}
-    <h1 class="section-name">{{sectionName}}</h1>
-  {% endif %}
+  <h1 class="section-name">{{sectionName}}</h1> {% endif %}
   <!--end component sectionName-->
-  
 </div>

@@ -1,23 +1,42 @@
 .magazine-page {
   $block-height: 200px;
+  @include breakpoint(max-width $medium) {
+    text-align: center;
+  }
   .magazine-descr {
     border: 4px solid #ccc;
     padding: 10px;
     height: $block-height;
     margin-top: 50px;
     margin-bottom: 50px;
+    @include breakpoint(max-width $medium) {
+      height: auto;
+    }
     .cell-pic {
       float: left;
       width: 28%;
       margin-right: 2%;
       text-align: center;
+      display: inline-block;
       height: $block-height;
+      @include breakpoint(max-width $medium) {
+        width: 155px;
+        height: auto;
+        float: none;
+        img {
+          width: 100%;
+        }
+      }
       .image {
         display: inline-block;
         padding: 10px;
         background-color: #fff;
         position: relative;
-        top:-50px;
+        top: -50px;
+        @include breakpoint(max-width $medium) {
+          top: 0;
+          padding: 0;
+        }
         img {
           background-color: #ccc;
           max-width: 200px;
@@ -26,8 +45,13 @@
         .about-person {
           background-color: #ccc;
           padding-top: 10px;
+          line-height: 1.3em;
+          @include breakpoint(max-width $medium) {
+            font-size: 0.9em;
+          }
           .name {
             padding: 10px;
+            padding-top: 5px;
           }
         }
       }
@@ -35,18 +59,26 @@
     .text {
       float: left;
       width: 70%;
-      h3{
+      @include breakpoint(max-width $medium) {
+        float: none;
+        width: 100%;
+      }
+      h3 {
         text-transform: uppercase;
-        text-align: left;
         font-size: 1.1em;
         margin-bottom: 1em;
         margin-top: 2em;
+        line-height: 1.3em;
+        @include breakpoint(max-width $medium) {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
       }
-      p{
+      p {
         line-height: 1.5em;
         font-style: italic;
         font-weight: 200;
       }
     }
-  }  
+  }
 }

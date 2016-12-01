@@ -138,7 +138,6 @@ header {
         line-height: 2em;
         cursor: pointer;
         &:hover {
-          background-color: scale-color(#00923f, 10);
           color: #fff;
           i {
             @include sprite($ic_note-hover);
