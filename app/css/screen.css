@@ -1316,6 +1316,51 @@ footer .bottom-line .dev {
   font-family: "Rubik";
 }
 
+.contact-box {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-box:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.contact-box .item {
+  background-color: #f7f7f7;
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+
+.contact-box .item:nth-child(2) {
+  margin-right: 0;
+}
+
+.contact-box .item .photo-box {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-box .item .photo-box:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.contact-box .item .photo-box .image {
+  float: left;
+  width: 49%;
+  padding-right: 1%;
+}
+
+.contact-box .item .photo-box .image:nth-child(2) {
+  padding: 0;
+}
+
 .search {
   position: relative;
 }

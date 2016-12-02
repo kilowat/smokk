@@ -1,0 +1,23 @@
+.contact-box{
+  @include container;
+  .item{
+    background-color: #f7f7f7;
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+    &:nth-child(2){
+      margin-right: 0;
+    }
+    .photo-box{
+      @include container;
+      .image{
+        float: left;
+        width: 49%;
+        padding-right: 1%;
+        &:nth-child(2){
+          padding: 0;
+        }
+      }
+    }
+  }
+}
