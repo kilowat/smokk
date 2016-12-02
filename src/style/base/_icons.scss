@@ -57,3 +57,15 @@
 .ic_triangle-2-hover{
   @include sprite($ic_triangle-2-hover);
 }
+.ic_position{
+  @include sprite($ic_position);
+}
+.ic_mob-phone{
+  @include sprite($ic_mob-phone);
+}
+.ic_printer{
+  @include sprite($ic_printer);
+}
+.ic_mail{
+  @include sprite($ic_mail);
+}

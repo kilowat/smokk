@@ -10,6 +10,12 @@ $(document).ready(function () {
     "slidesToScroll": 1,
     dots: true,
   });
+  
+  $(".about-slider").slick({
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    dots: true,
+  });
 
   $('#link-slider').slick({
     "slidesToShow": 4,

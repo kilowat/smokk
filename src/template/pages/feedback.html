@@ -1,146 +1,145 @@
 {% extends './../layouts/master.html' %} {% block content %}
 <div class="wrapper">
-  <div class="feedback-page">
-    <form action="" method="POST" target="uploadresult" name="upfiles" enctype="multipart/form-data">
-      <div class="feedback-form">
-        <div class="row">
-          <span class="head">Выберете получателя обращения:</span>
-          <div class="cell">
-            <select name="" id="">
-              <option value="1">Выбор адресата</option>
-            </select>
-          </div>
+
+  <form action="" method="POST" target="uploadresult" name="upfiles" enctype="multipart/form-data">
+    <div class="feedback-form">
+      <div class="row">
+        <span class="head">Выберете получателя обращения:</span>
+        <div class="cell">
+          <select name="" id="">
+            <option value="1">Выбор адресата</option>
+          </select>
         </div>
-        <div class="row">
-          <span class="head">Введите Ваши личные данные:</span>
-          <div class="cell person-info">
-            <div class="cell">
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="Фамилия" name="surname">
-                  <span class="help-text">Поле обязательно для заполнения</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="Имя" name="name">
-                  <span class="help-text">Поле обязательно для заполнения</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="Отчество" name="lastname">
-                  <span class="help-text">Поле обязательно для заполнения</span>
-                </div>
+      </div>
+      <div class="row">
+        <span class="head">Введите Ваши личные данные:</span>
+        <div class="cell person-info">
+          <div class="cell">
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="Фамилия" name="surname">
+                <span class="help-text">Поле обязательно для заполнения</span>
               </div>
             </div>
-            <div class="cell">
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="Место работы/учебы" name="position">
-                  <span class="help-text">Например студент КубГУ или инженер</span>
-                </div>
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="Имя" name="name">
+                <span class="help-text">Поле обязательно для заполнения</span>
               </div>
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="Имя" name="phone">
-                  <span class="help-text">Только мобильные телефоны</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="cell">
-                  <input type="text" placeholder="E-mail" name="email">
-                  <span class="help-text">Укажите Ваш реальный E-mail</span>
-                </div>
+            </div>
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="Отчество" name="lastname">
+                <span class="help-text">Поле обязательно для заполнения</span>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row address-info">
           <div class="cell">
-            <select name="" id="">
-              <option value="1">Выбор муниципалитета</option>
-            </select>
-            <span class="help-text">Выберите район или город Краснодарского края</span>
-          </div>
-          <div class="cell">
-            <select name="" id="">
-              <option value="1">Выбор поселения</option>
-              <option value="2">Выбор поселения</option>
-              <option value="3">Выбор поселения</option>
-              <option value="4">Выбор поселения</option>
-            </select>
-            <span class="help-text">Выберите Ваш населнный пункт</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell">
-            <input type="text" placeholder="Почтовый адрес" name="post_address">
-            <span class="help-text">Полныый почтовый адрес включая индекс</span>
-          </div>
-        </div>
-        <div class="row">
-          <span class="head">Ваш вопрос:</span>
-          <div class="cell">
-            <input type="text" placeholder="Тема обращения">
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell">
-            <textarea name="" id="" placeholder="Текст вопроса" cols="30" rows="10"></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <span class="head">Вы можете добавить несколько вложений к обращению:</span>
-          <div class="buttons" id="filewrapper">
-            <div class="buttons-row">
-              <label class="file_upload" for="load_file">
-                <span>Выбрать</span>
-                <mark>Файл не выбран</mark>
-                <input name="file[]" type="file" id="load_file" size="30" />
-              </label>
-              <button type="button" class="file-del-btn" onclick="uploader.delfield(this)">Удалить фаил X</button>
-            </div>
-          </div>
-          <div class="buttons-row add-button-row">
-            <button type="button" onclick="uploader.addfield(window)" class="base-btn grey add-field">Добавить еще файл</button>
-          </div>
-        </div>
-        <div class="row">
-          <span class="head">Нам необходимо удостовериться, что Вы не спам-робот:</span>
-          <div class="row bottom-row">
-            <div class="cell">
-              <div class="table">
-                <div class="input-block">
-                  <span class="capcha-label">Введите код безопастности</span>
-                </div>
-                <div class="input-block text-center">
-                  <div class="capcha-img">
-                    33434
-                  </div>
-                </div>
-                <div class="input-block capcha-input">
-                  <input type="text" placeholder="Код">
-                </div>
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="Место работы/учебы" name="position">
+                <span class="help-text">Например студент КубГУ или инженер</span>
               </div>
             </div>
-            <div class="cell">
-              <div class="table">
-                <div class="input-block">
-                  <button type="submit" class="base-btn green send">Отправить <i class="ic_triangle-2"></i></button>
-                </div>
-                <div class="input-block text-right">
-                  <input type="reset" value="Очистить форму" class="clear-form">
-                </div>
-                <div class="input-block text-right">
-                  <a href="" title="Закрыть" class="close-form">Закрыть</a>
-                </div>
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="Имя" name="phone">
+                <span class="help-text">Только мобильные телефоны</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell">
+                <input type="text" placeholder="E-mail" name="email">
+                <span class="help-text">Укажите Ваш реальный E-mail</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </form>
-  </div>
+      <div class="row address-info">
+        <div class="cell">
+          <select name="" id="">
+            <option value="1">Выбор муниципалитета</option>
+          </select>
+          <span class="help-text">Выберите район или город Краснодарского края</span>
+        </div>
+        <div class="cell">
+          <select name="" id="">
+            <option value="1">Выбор поселения</option>
+            <option value="2">Выбор поселения</option>
+            <option value="3">Выбор поселения</option>
+            <option value="4">Выбор поселения</option>
+          </select>
+          <span class="help-text">Выберите Ваш населнный пункт</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">
+          <input type="text" placeholder="Почтовый адрес" name="post_address">
+          <span class="help-text">Полныый почтовый адрес включая индекс</span>
+        </div>
+      </div>
+      <div class="row">
+        <span class="head">Ваш вопрос:</span>
+        <div class="cell">
+          <input type="text" placeholder="Тема обращения">
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">
+          <textarea name="" id="" placeholder="Текст вопроса" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <span class="head">Вы можете добавить несколько вложений к обращению:</span>
+        <div class="buttons" id="filewrapper">
+          <div class="buttons-row">
+            <label class="file_upload" for="load_file">
+              <span>Выбрать</span>
+              <mark>Файл не выбран</mark>
+              <input name="file[]" type="file" id="load_file" size="30" />
+            </label>
+            <button type="button" class="file-del-btn" onclick="uploader.delfield(this)">Удалить фаил X</button>
+          </div>
+        </div>
+        <div class="buttons-row add-button-row">
+          <button type="button" onclick="uploader.addfield(window)" class="base-btn grey add-field">Добавить еще файл</button>
+        </div>
+      </div>
+      <div class="row">
+        <span class="head">Нам необходимо удостовериться, что Вы не спам-робот:</span>
+        <div class="row bottom-row">
+          <div class="cell">
+            <div class="table">
+              <div class="input-block">
+                <span class="capcha-label">Введите код безопастности</span>
+              </div>
+              <div class="input-block text-center">
+                <div class="capcha-img">
+                  33434
+                </div>
+              </div>
+              <div class="input-block capcha-input">
+                <input type="text" placeholder="Код">
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="table">
+              <div class="input-block">
+                <button type="submit" class="base-btn green send">Отправить <i class="ic_triangle-2"></i></button>
+              </div>
+              <div class="input-block text-right">
+                <input type="reset" value="Очистить форму" class="clear-form">
+              </div>
+              <div class="input-block text-right">
+                <a href="" title="Закрыть" class="close-form">Закрыть</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 {% endblock %}

@@ -20,7 +20,7 @@
   @include sprite($ic_right-arrow);
 }
 .slick-dots{
-  margin-left: 43%;
+  display: inline-block;
   margin-top: 10px;
   li{
     display: inline-block;

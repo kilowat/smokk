@@ -1,209 +1,208 @@
-.feedback-page {
-  $smallSize: 750px;
-  .feedback-form {
-    .head {
-      font-weight: 600;
-      margin-bottom: 1.2em;
-      display: inline-block;
+$smallSize: 750px;
+.feedback-form {
+  .head {
+    font-weight: 600;
+    margin-bottom: 1.2em;
+    display: inline-block;
+  }
+  >.row:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .help-text {
+    font-size: 0.9em;
+    color: #ddd;
+  }
+  .row {
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
     }
-    >.row:nth-child(2) {
-      margin-bottom: 0;
+    textarea {
+      font-family: $base-font-family;
+      height: 200px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 1em;
     }
-    .help-text {
-      font-size: 0.9em;
-      color: #ddd;
-    }
-    .row {
-      margin-bottom: 20px;
-      input {
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-      }
-      textarea {
-        font-family: $base-font-family;
-        height: 200px;
-        width: 100%;
-        box-sizing: border-box;
-        padding-top: 1em;
-      }
-      .person-info {
-        @include container;
-        >.cell:first-child {
-          float: left;
-          width: 58%;
-          margin-right: 2%;
-          @include breakpoint(max-width $smallSize) {
-            width: 100%;
-            left: auto;
-            margin-bottom: 10px;
-          }
-        }
-        >.cell:nth-child(2) {
-          float: left;
-          width: 40%;
-          @include breakpoint(max-width $smallSize) {
-            width: 100%;
-            left: auto;
-            margin-bottom: 10px;
-          }
-        }
-      }
-      .buttons {
-        .buttons-row {
-          margin-bottom: 1em;
-          position: relative;
-          .file-del-btn {
-            position: absolute;
-            right: 0;
-            top: 0;
-          }
-        }
-      }
-      .add-field {
-        width: 200px;
-      }
-    }
-    .address-info {
+    .person-info {
       @include container;
       >.cell:first-child {
         float: left;
-        width: 55%;
+        width: 58%;
         margin-right: 2%;
+        @include breakpoint(max-width $smallSize) {
+          width: 100%;
+          left: auto;
+          margin-bottom: 10px;
+        }
       }
       >.cell:nth-child(2) {
         float: left;
-        width: 43%;
-      }
-    }
-    .file_upload {
-      display: inline-block;
-      font-size: 1em;
-      height: 2.8em;
-      overflow: hidden;
-      position: relative;
-      &:hover {
-        span {
-          color: #aaa;
+        width: 40%;
+        @include breakpoint(max-width $smallSize) {
+          width: 100%;
+          left: auto;
+          margin-bottom: 10px;
         }
       }
     }
-    .file-del-btn {
-      background-color: #fff;
-      border: 1px solid;
-      color: red;
-      cursor: pointer;
-      font-family: "Open Sans";
-      font-size: 1.1em;
-      height: 46px;
-      line-height: 2em;
+    .buttons {
+      .buttons-row {
+        margin-bottom: 1em;
+        position: relative;
+        .file-del-btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .add-field {
       width: 200px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .file_upload span,
-    .file_upload mark {
-      display: inline-block;
-    }
-    .file_upload span {
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      width: 8em;
-      height: 100%;
-      background-color: #fff;
-      border: 1px solid;
-      color: #ccc;
-      cursor: pointer;
-      font-family: "Open Sans";
-      font-size: 1.1em;
-      line-height: 2.3em;
-      padding-left: 1em;
-    }
-    .file_upload mark {
-      background: transparent;
-      padding-left: 1em
-    }
-    .file_upload input[type=file] {
-      position: absolute;
-      top: 0;
-      opacity: 0
     }
   }
-  .bottom-row {
-    margin-top: 15px;
+  .address-info {
     @include container;
-    .cell {
-      box-sizing: border-box;
+    >.cell:first-child {
       float: left;
-      padding-left: 0.54348%;
-      padding-right: 0.54348%;
-      width: 50%;
-      @include breakpoint(max-width $smallSize) {
-        width: 100%;
-        left: auto;
-        margin-bottom: 10px;
+      width: 55%;
+      margin-right: 2%;
+    }
+    >.cell:nth-child(2) {
+      float: left;
+      width: 43%;
+    }
+  }
+  .file_upload {
+    display: inline-block;
+    font-size: 1em;
+    height: 2.8em;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      span {
+        color: #aaa;
       }
     }
-    .table {
+  }
+  .file-del-btn {
+    background-color: #fff;
+    border: 1px solid;
+    color: red;
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-size: 1.1em;
+    height: 46px;
+    line-height: 2em;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .file_upload span,
+  .file_upload mark {
+    display: inline-block;
+  }
+  .file_upload span {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 8em;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid;
+    color: #ccc;
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-size: 1.1em;
+    line-height: 2.3em;
+    padding-left: 1em;
+  }
+  .file_upload mark {
+    background: transparent;
+    padding-left: 1em
+  }
+  .file_upload input[type=file] {
+    position: absolute;
+    top: 0;
+    opacity: 0
+  }
+}
+
+.bottom-row {
+  margin-top: 15px;
+  @include container;
+  .cell {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 0.54348%;
+    padding-right: 0.54348%;
+    width: 50%;
+    @include breakpoint(max-width $smallSize) {
       width: 100%;
-      .input-block {
-        display: table-cell;
-        vertical-align: middle;
+      left: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .table {
+    width: 100%;
+    .input-block {
+      display: table-cell;
+      vertical-align: middle;
+      @include breakpoint(max-width $smallSize) {
+        display: block;
+        text-align: center;
+      }
+      .capcha-label {
+        font-style: italic;
+        color: #b9b9b9;
+      }
+      .capcha-img {
+        padding-left: 10px;
+        padding-right: 10px;
         @include breakpoint(max-width $smallSize) {
-          display: block;
-          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 10px;
         }
-        .capcha-label {
-          font-style: italic;
-          color: #b9b9b9;
+      }
+      .capcha-input {
+        max-width: 200px;
+      }
+      .clear-form,
+      .close-form {
+        border-bottom: 1px dashed;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        background-color: transparent;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0;
+        font-size: 1em;
+        cursor: pointer;
+        line-height: 1.2em;
+        &:hover {
+          color: $link-hover-color;
         }
-        .capcha-img {
-          padding-left: 10px;
-          padding-right: 10px;
-          @include breakpoint(max-width $smallSize) {
-            margin-top: 10px;
-            margin-bottom: 10px;
-          }
+        @include breakpoint(max-width $smallSize) {
+          display: none;
         }
-        .capcha-input {
-          max-width: 200px;
+      }
+      .clear-form {
+        width: 124px;
+      }
+      .send {
+        height: 43px;
+        max-width: 200px;
+        i {
+          margin-left: 15px;
+          position: relative;
+          top: 3px;
         }
-        .clear-form,
-        .close-form {
-          border-bottom: 1px dashed;
-          border-left: 0;
-          border-top: 0;
-          border-right: 0;
-          background-color: transparent;
-          text-decoration: none;
-          display: inline-block;
-          padding: 0;
-          font-size: 1em;
-          cursor: pointer;
-          line-height: 1.2em;
-          &:hover {
-            color: $link-hover-color;
-          }
-          @include breakpoint(max-width $smallSize) {
-            display: none;
-          }
-        }
-        .clear-form {
-          width: 124px;
-        }
-        .send {
-          height: 43px;
-          max-width: 200px;
+        &:hover {
           i {
-            margin-left: 15px;
-            position: relative;
-            top: 3px;
-          }
-          &:hover {
-            i {
-              @include sprite($ic_triangle-2);
-            }
+            @include sprite($ic_triangle-2);
           }
         }
       }
