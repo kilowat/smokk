@@ -1,6 +1,7 @@
 {
   "title": "Журнал местное самоуправление Кубани",
   "sectionName": "Журнал местное самоуправление Кубани",
+  "sectionText": "Журнал Местное самоуправление Кубани - это самое популярное настольное издание среди чиновников Краснодарского края.",
   "breadCrumbs": [
     {
       "name": "Главная"
@@ -10,6 +11,41 @@
     }
   ],
   "magazins": [
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
+    {
+      "dateName": "Январь-февраль 2017",
+      "img": "./images/magazin.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptatem doloremque sequi consectetur ducimus libero magnam voluptates recusandae optio fugiat, perferendis ab eligendi blanditiis, id quaerat adipisci consequuntur nam omnis."
+    },
     {
       "dateName": "Январь-февраль 2017",
       "img": "./images/magazin.png",

@@ -1,6 +1,7 @@
 {
   "title": "Полезные ссылки Федеральные органы",
   "sectionName": "Федеральные органы власти",
+  "sectionText": "На данной странице раположены ссылки на интернет-реусурсы федеральных органов власти",
   "breadCrumbs": [
     {
       "name": "Главная"
@@ -15,47 +16,47 @@
   "links": [
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     },
     {
       "name": "Президент Российской Федерации",
-      "img": "./images/gerb-2.png",
+      "img": "./images/link-1.png",
       "link": "www.kremlin.ru"
     }
   ]

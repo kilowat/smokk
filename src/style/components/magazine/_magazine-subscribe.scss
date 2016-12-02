@@ -1,12 +1,24 @@
 .magazine-subscribe {
   h2 {
     text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 0.2em;
   }
   .descr {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 2.1em;
+    line-height: 1.4em;
   }
   .subscribe-form {
+    @include breakpoint(min-width $medium) {
+      padding-bottom: 5em;
+      text-align: center;
+      >form {
+        display: inline-block;
+        text-align: left;
+        width: 87%;
+      }
+    }
     input {
       box-sizing: border-box;
       display: block;
@@ -18,7 +30,7 @@
         margin-bottom: 1em;
         .cell {
           @include span(4 of 12 inside);
-          @include breakpoint(max-width $small) {
+          @include breakpoint(max-width $medium) {
             @include span(1 of 1);
             float: none;
             margin-bottom: 1em;
@@ -28,7 +40,7 @@
           .cell {
             &:first-child {
               @include span(4 of 12 inside);
-              @include breakpoint(max-width $small) {
+              @include breakpoint(max-width $medium) {
                 @include span(1 of 1);
                 float: none;
                 margin-bottom: 1em;
@@ -36,7 +48,7 @@
             }
             &:nth-child(2) {
               @include span(8 at 5 of 12 inside);
-              @include breakpoint(max-width $small) {
+              @include breakpoint(max-width $medium) {
                 @include span(1 of 1);
                 float: none;
                 margin-bottom: 1em;
@@ -47,7 +59,6 @@
       }
     }
     .bottom-row {
-      $smallSize: 750px;
       margin-top: 15px;
       @include container;
       .cell-bottom {
@@ -56,7 +67,20 @@
         padding-left: 0.54348%;
         padding-right: 0.54348%;
         width: 50%;
-        @include breakpoint(max-width $smallSize) {
+        &:first-child {
+          width: 56%;
+          @include breakpoint(max-width $medium) {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 44%;
+          @include breakpoint(max-width $medium) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        @include breakpoint(max-width $medium) {
           width: 100%;
           left: auto;
           margin-bottom: 10px;
@@ -67,7 +91,7 @@
         .input-block {
           display: table-cell;
           vertical-align: middle;
-          @include breakpoint(max-width $smallSize) {
+          @include breakpoint(max-width $medium) {
             display: block;
             text-align: center;
           }
@@ -78,7 +102,7 @@
           .capcha-img {
             padding-left: 10px;
             padding-right: 10px;
-            @include breakpoint(max-width $smallSize) {
+            @include breakpoint(max-width $medium) {
               margin-top: 10px;
               margin-bottom: 10px;
             }
@@ -102,16 +126,17 @@
             &:hover {
               color: $link-hover-color;
             }
-            @include breakpoint(max-width $smallSize) {
+            @include breakpoint(max-width $medium) {
               display: none;
             }
           }
           .clear-form {
             width: 124px;
+            margin-left: 10px;
           }
           .send {
-            height: 43px;
-            max-width: 200px;
+            height: 45px;
+            width: 100%;
             i {
               margin-left: 15px;
               position: relative;
@@ -122,6 +147,22 @@
                 @include sprite($ic_triangle-2);
               }
             }
+          }
+        }
+        .capcha-msg-cell {
+          width: 53%;
+          @include breakpoint(max-width $medium) {
+            width: 100%;
+          }
+        }
+        .send-btn-cell {
+          width: 70%;
+          padding-right: 1%;
+          @include breakpoint(max-width $medium) {
+            text-align: center;
+            width: 300px;
+            padding: 0;
+            display: inline-block;
           }
         }
       }

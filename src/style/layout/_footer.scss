@@ -7,7 +7,7 @@ footer {
   .wrapper {
     background-color: #000000;
     .bottom-menu-wrapper {
-      padding-top: 35px;
+      padding-top: 23px;
       @include breakpoint(max-width 890px) {
         display: none;
       }

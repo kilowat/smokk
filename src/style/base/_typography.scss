@@ -13,7 +13,6 @@ h2 {
   line-height: 1.5em;
   @include breakpoint(max-width $small){
     font-size: 1.1em;
-    font-weight: 400;
   }
 }
 p{
