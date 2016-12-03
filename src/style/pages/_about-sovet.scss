@@ -1,0 +1,71 @@
+.about-sovet {
+  $mobile-size: 920px;
+  .sovet-list {
+    .list {
+      @include container;
+      @include breakpoint(max-width $mobile-size) {
+        text-align: center;
+      }
+      .item {
+        width: 30%;
+        height: 200px;
+        background-color: #f7f7f7;
+        @include breakpoint(min-width $mobile-size) {
+          @include gallery(1 of 3 1/30);
+        }
+        @include breakpoint(max-width $mobile-size) {
+          display: inline-block;
+          width: 300px;
+          text-align: left;
+        }
+        margin-bottom: 0.9%;
+        .content {
+          @include container;
+          padding: 10px;
+          .image {
+            float: left;
+            width: 40%;
+            padding-right: 5px;
+            img {
+              width: 100%;
+              height: auto;
+              @include breakpoint(max-width $medium) {
+                max-width: 100px;
+              }
+            }
+          }
+          .text {
+            float: left;
+            width: 56%;
+            .name {
+              b {
+                font-size: 1.1em;
+                margin-bottom: 0.2em;
+                display: inline-block;
+                margin-top: 0.5em;
+              }
+              margin-bottom: 0.7em;
+            }
+            .position {
+              .prop-name {
+                color: #8b8b8b;
+                margin-bottom: 0.3em;
+                display: inline-block;
+                margin-top: 0.3em;
+                font-size: 0.9em;
+                font-weight: 600;
+              }
+              .prop-value {
+                font-style: italic;
+                font-weight: 200;
+                color: #8b8b8b;
+                line-height: 1.2em;
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

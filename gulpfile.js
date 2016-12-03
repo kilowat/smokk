@@ -36,7 +36,8 @@ var libs = {
   slick: libsPath.slick, // inject name slick
   formValidator: libsPath.formValidator,
   select:libsPath.select,
-  //fancybox:libsPath.fancybox,
+  fancybox:libsPath.fancybox,
+  icheck:libsPath.icheck
   //cropper:libsPath.cropper,
   //fullpage:libsPath.fullpage, // inject name fullpage
 }

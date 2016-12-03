@@ -1,0 +1,61 @@
+.about-sovet-detail {
+  .block {
+    margin-top: 2em;
+    @include container;
+    .image {
+      width: 34%;
+      float: left;
+      margin-right: 3%;
+      @include breakpoint(max-width $small) {
+        float: none;
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      .person {
+        background-color: #f7f7f7;
+        margin-top: 15px;
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        ul {
+          li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 1.2em;
+            span,
+            a {
+              color: #949494;
+              font-size: 0.9em;
+            }
+            .prop-name {
+              display: block;
+              font-family: $rubik;
+            }
+            .prop-value {
+              font-weight: 200;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+    .text {
+      width: 63%;
+      float: left;
+      @include breakpoint(max-width $small) {
+        float: none;
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

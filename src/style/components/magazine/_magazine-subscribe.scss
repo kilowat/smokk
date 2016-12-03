@@ -68,13 +68,13 @@
         padding-right: 0.54348%;
         width: 50%;
         &:first-child {
-          width: 56%;
+          width: 53%;
           @include breakpoint(max-width $medium) {
             width: 100%;
           }
         }
         &:nth-child(2) {
-          width: 44%;
+          width: 47%;
           @include breakpoint(max-width $medium) {
             width: 100%;
             text-align: center;
@@ -137,6 +137,7 @@
           .send {
             height: 45px;
             width: 100%;
+            max-width: 250px;
             i {
               margin-left: 15px;
               position: relative;

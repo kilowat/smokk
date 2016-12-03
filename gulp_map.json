@@ -107,5 +107,10 @@
 	"css":[
 		"src/libs/msgBox/css/lobibox.min.css"
 	]
+  },
+  "icheck":{
+    "js":[
+      "src/libs/icheck/js/icheck.min.js"
+    ]
   }
 }

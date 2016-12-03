@@ -1,0 +1,29 @@
+.law-base-page {
+  .law-filter{
+    @include container;
+    .cell{
+      @include span(1 of 4 inside);   
+    }
+  }
+  .list {
+    .item {
+      @include container;
+      margin-bottom: 2em;
+      img {
+        float: left;
+        margin-right: 10px;
+      }
+      .name{
+        font-weight: 600;
+        margin-bottom: 0.5em;
+      }
+      .path-name{
+        font-weight: 200;
+        margin-bottom: 0.5em;
+      }
+      a{
+        font-weight: 100;  
+      }
+    }
+  }
+}

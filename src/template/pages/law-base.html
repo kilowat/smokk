@@ -1,0 +1,44 @@
+{% extends './../layouts/master.html' %} {% block content %}
+<div class="wrapper">
+  <div class="law-base-page">
+    <!--start component law list-->
+    <div class="law-filter">
+      <div class="cell">
+        <label for="">Все документы</label>
+        <input type="radio" id="all" name="filtr_applay" value="all">
+      </div>
+      <div class="cell">
+        <label for="secion_1">Федеральное законодательство</label>
+        <input type="radio" id="secion_1" name="filtr_applay" value="secion_1">
+      </div>
+      <div class="cell">
+        <label for="secion_2">Краевое законодательство</label>
+        <input type="radio" id="secion_2" name="filtr_applay" value="secion_2">
+      </div>
+      <div class="cell">
+        <label for="secion_3">Местные нормативно-правовые акты</label>
+        <input type="radio" id="secion_3" name="filtr_applay" value="secion_3">
+      </div>
+    </div>
+    <div class="list">
+      <!--foreach $arResult-->
+      {% for item in lawItem %}
+      <div class="item">
+        <img src="{{ item.img }}" alt="">
+        <div class="name">
+          {{ item.name }}
+        </div>
+        <div class="path-name">
+          {{ item.section }}
+        </div>
+        <a href="" title="">Скачать в формате MS Word (2 Мб)</a>
+        <a href="" title="">Скачать в формате PDF (1,2 Мб)</a>
+      </div>
+      {% endfor %}
+      <!--endforeach-->
+    </div>
+    <!--end component law list-->
+  </div>
+</div>
+
+{% endblock %}

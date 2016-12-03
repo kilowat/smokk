@@ -1,0 +1,66 @@
+.navigation {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  @include breakpoint(max-width $small) {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .navigation-pages {
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 200;
+    >* {
+      margin-left: 0.1em;
+      margin-right: 0.1em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a {
+      text-decoration: underline;
+      color: #6b6b6b;
+      &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+      }
+    }
+    .nav-current-page {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+    .disabled_left {
+      @include sprite($ic_pagin-arrow-left);
+      margin-right: 10px;
+    }
+    .disabled_right {
+      @include sprite($ic_pagin-arrow-right);
+      margin-left: 10px;
+    }
+  }
+}
+
+.page-nav {
+  position: relative;
+  @include breakpoint(max-width 750px) {
+    text-align: center;
+  }
+  .page-filter {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    >* {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    label {
+      margin-right: 20px;
+    }
+    .selectize-control {
+      width: 100px;
+    }
+    @include breakpoint(max-width 750px) {
+      position: relative;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{% extends './../layouts/master.html' %} {% block content %}
+<div class="wrapper">
+  <div class="about-sovet">
+    <!--start component sovet list-->
+    <div class="sovet-list">
+      <div class="list">
+        <!--foreach $arResult-->
+        {%for item in sovetItem %}
+        <div class="item">
+          <div class="content">
+            <div class="image">
+              <img src="{{ item.img }}" alt="">
+            </div>
+            <div class="text">
+              <div class="name">
+                <b>{{ item.surname }}</b>
+                <br>{{ item.name }}
+              </div>
+              <div class="position">
+                <span class="prop-name">Основная должность:</span>
+                <span class="prop-value">{{ item.position }}</span>
+              </div>
+              <div class="position">
+                <span class="prop-name">Должность в СМОКК:</span>
+                <span class="prop-value">{{ item.doppositon }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!--endforeach-->
+    </div>
+    <div class="page-nav">
+      {% include './../components/pagination.html' %}
+      <div class="page-filter">
+        <label for="page-count">Показвать по:</label>
+        <select name="page-count" id="page-count">
+          <option value="15">15</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!--end component sovet list-->
+</div>
+
+{% endblock %}

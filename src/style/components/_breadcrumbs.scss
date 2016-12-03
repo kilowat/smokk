@@ -1,5 +1,8 @@
 .breadcrumbs{
   margin-top: 2.5em;
+  @include breakpoint(max-width $small) {
+    display: none;
+  }
   @include breakpoint(max-width $medium) {
     text-align: center;
     padding-top: 1em;
