@@ -1,28 +1,103 @@
 .law-base-page {
-  .law-filter{
-    @include container;
-    .cell{
-      @include span(1 of 4 inside);   
+  .law-filter {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #b9b9b9;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin-bottom: 2em;
+    @include breakpoint(max-width $medium) {
+      font-size: 0.9em;
+      border: 0;
+    }
+    .cell {
+      position: relative;
+      display: table-cell;
+      width: 24%;
+      padding-right: 0.25%;
+      padding-left: 0.25%;
+      &:first-child {
+        width: 12%;
+      }
+      &:nth-child(2) {
+        width: 22%;
+      }
+      &:nth-child(3) {
+        width: 18%;
+      }
+      &:last-child .filter-radio {
+        @include breakpoint(max-width $medium) {
+          border-bottom: 1px solid #b9b9b9;
+        }
+      }
+      @include breakpoint(max-width $medium) {
+        width: 100%!important;
+        display: block;
+      }
+      .filter-radio {
+        height: 58px;
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid #b9b9b9;
+        border-bottom: none;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        z-index: 1;
+        @include breakpoint(max-width $medium) {
+          height: 30px;
+          border-radius: 0;
+        }
+        &:hover {}
+        &.checked {
+          border-color: $link-hover-color;
+          height: 55px;
+          padding-bottom: 6px;
+          top: 0;
+        }
+        &.checked+label {
+          color: $link-hover-color;
+        }
+      }
+      label {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        text-align: center;
+        @include breakpoint(max-width $medium) {
+          top: 10px;
+        }
+      }
     }
   }
   .list {
+    @include breakpoint(max-width $medium) {
+      text-align: center;
+    }
     .item {
       @include container;
       margin-bottom: 2em;
       img {
         float: left;
         margin-right: 10px;
+        @include breakpoint(max-width $medium) {
+          float: none;
+        }
       }
-      .name{
+      .name {
         font-weight: 600;
         margin-bottom: 0.5em;
       }
-      .path-name{
+      .path-name {
         font-weight: 200;
         margin-bottom: 0.5em;
       }
-      a{
-        font-weight: 100;  
+      a {
+        font-weight: 100;
+        margin-right: 20px;
+        @include breakpoint(max-width $medium) {
+          display: block;
+          margin-bottom: 1em;
+        }
       }
     }
   }

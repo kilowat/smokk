@@ -112,5 +112,10 @@
     "js":[
       "src/libs/icheck/js/icheck.min.js"
     ]
+  },
+  "placeholder":{
+    "js":[
+      "src/libs/placeholder/jquery.textPlaceholder.js"
+    ]
   }
 }

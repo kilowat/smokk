@@ -190,6 +190,10 @@ i {
   }
 }
 
+.text-placeholder {
+  color: #bebebe !important;
+}
+
 html {
   font-family: "Open Sans";
   font-size: 15px;
@@ -1839,27 +1843,103 @@ footer .bottom-line .dev {
 }
 
 .law-base-page .law-filter {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid #b9b9b9;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  margin-bottom: 2em;
 }
 
-.law-base-page .law-filter:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (max-width: 980px) {
+  .law-base-page .law-filter {
+    font-size: 0.9em;
+    border: 0;
+  }
 }
 
 .law-base-page .law-filter .cell {
-  -webkit-box-sizing: border-box;
-  -khtml-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 25%;
-  float: left;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  position: relative;
+  display: table-cell;
+  width: 24%;
+  padding-right: 0.25%;
+  padding-left: 0.25%;
+}
+
+.law-base-page .law-filter .cell:first-child {
+  width: 12%;
+}
+
+.law-base-page .law-filter .cell:nth-child(2) {
+  width: 22%;
+}
+
+.law-base-page .law-filter .cell:nth-child(3) {
+  width: 18%;
+}
+
+@media (max-width: 980px) {
+  .law-base-page .law-filter .cell:last-child .filter-radio {
+    border-bottom: 1px solid #b9b9b9;
+  }
+}
+
+@media (max-width: 980px) {
+  .law-base-page .law-filter .cell {
+    width: 100% !important;
+    display: block;
+  }
+}
+
+.law-base-page .law-filter .cell .filter-radio {
+  height: 58px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #b9b9b9;
+  border-bottom: none;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+}
+
+@media (max-width: 980px) {
+  .law-base-page .law-filter .cell .filter-radio {
+    height: 30px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+.law-base-page .law-filter .cell .filter-radio.checked {
+  border-color: #007cc2;
+  height: 55px;
+  padding-bottom: 6px;
+  top: 0;
+}
+
+.law-base-page .law-filter .cell .filter-radio.checked + label {
+  color: #007cc2;
+}
+
+.law-base-page .law-filter .cell label {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .law-base-page .law-filter .cell label {
+    top: 10px;
+  }
+}
+
+@media (max-width: 980px) {
+  .law-base-page .list {
+    text-align: center;
+  }
 }
 
 .law-base-page .list .item {
@@ -1880,6 +1960,12 @@ footer .bottom-line .dev {
   margin-right: 10px;
 }
 
+@media (max-width: 980px) {
+  .law-base-page .list .item img {
+    float: none;
+  }
+}
+
 .law-base-page .list .item .name {
   font-weight: 600;
   margin-bottom: 0.5em;
@@ -1892,6 +1978,14 @@ footer .bottom-line .dev {
 
 .law-base-page .list .item a {
   font-weight: 100;
+  margin-right: 20px;
+}
+
+@media (max-width: 980px) {
+  .law-base-page .list .item a {
+    display: block;
+    margin-bottom: 1em;
+  }
 }
 
 .search {
@@ -4715,7 +4809,6 @@ ul.bxslider {
 .selectize-dropdown,
 .selectize-input,
 .selectize-input input {
-  color: #303030;
   font-family: inherit;
   -webkit-font-smoothing: inherit;
 }
@@ -4735,8 +4828,7 @@ ul.bxslider {
   overflow: hidden;
   position: relative;
   line-height: 3em;
-  font-size: 1.1em;
-  color: #b9b9b9;
+  color: #474747;
   z-index: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4757,14 +4849,8 @@ ul.bxslider {
   cursor: default !important;
 }
 
-.selectize-input.focus {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
 .selectize-input.dropdown-active {
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
+  border-color: #007cc2;
 }
 
 .selectize-input > * {
@@ -4789,7 +4875,7 @@ ul.bxslider {
 
 .selectize-control.multi .selectize-input > div.active {
   background: #e8e8e8;
-  color: #303030;
+  color: #000;
   border: 0 solid #cacaca;
 }
 
@@ -4844,27 +4930,15 @@ ul.bxslider {
 .selectize-dropdown {
   position: absolute;
   z-index: 10;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #007cc2;
   background: #ffffff;
-  margin: -1px 0 0 0;
-  border-top: 0 none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  font-style: italic;
 }
 
 .selectize-dropdown [data-selectable] {
   cursor: pointer;
   overflow: hidden;
-}
-
-.selectize-dropdown [data-selectable] .highlight {
-  background: rgba(125, 168, 208, 0.2);
-  -webkit-border-radius: 1px;
-  border-radius: 1px;
 }
 
 .selectize-dropdown [data-selectable],
@@ -4883,7 +4957,6 @@ ul.bxslider {
 }
 
 .selectize-dropdown .active {
-  background-color: #f5fafd;
   color: #495c68;
 }
 
@@ -4919,11 +4992,11 @@ ul.bxslider {
   top: 50%;
   right: 10px;
   margin-top: -3px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
   background-image: url(../images/sprite.png);
-  background-position: -79px -37px;
+  background-position: -43px -36px;
   width: 16px;
   height: 8px;
 }
@@ -4932,9 +5005,13 @@ ul.bxslider {
   margin-top: -4px;
   border-width: 0 5px 5px 5px;
   border-color: transparent transparent #808080 transparent;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+  background-image: url(../images/sprite.png);
+  background-position: -79px -37px;
+  width: 16px;
+  height: 8px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .selectize-control.rtl.single .selectize-input:after {

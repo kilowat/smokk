@@ -37,7 +37,8 @@ var libs = {
   formValidator: libsPath.formValidator,
   select:libsPath.select,
   fancybox:libsPath.fancybox,
-  icheck:libsPath.icheck
+  icheck:libsPath.icheck,
+  //placeholder:libsPath.placeholder,
   //cropper:libsPath.cropper,
   //fullpage:libsPath.fullpage, // inject name fullpage
 }

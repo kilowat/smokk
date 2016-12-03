@@ -10,7 +10,7 @@ $(document).ready(function () {
     "slidesToScroll": 1,
     dots: true,
   });
-  
+
   $(".about-slider").slick({
     "slidesToShow": 1,
     "slidesToScroll": 1,
@@ -62,5 +62,10 @@ $(document).ready(function () {
 
   //customize select
   $('select').selectize();
-
+  
+  $('.law-filter input').iCheck({
+    radioClass: 'filter-radio'
+  });
+  
+  
 });
